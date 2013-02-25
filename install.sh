@@ -1,6 +1,7 @@
 #!/bin/bash
 files=(private.xml)
 instdirs=("~/Library/Application Support/KeyRemap4MacBook")
+exclude=("." ".." "README.md" "install.sh")
 
 backup="bak"
 overwrite=1
@@ -9,18 +10,20 @@ newlink=()
 exist=()
 curdir=`pwd -P`
 # help
-HELP="Usage: $0 [-nd] [-b <backup file postfix>] [-e <exclude file>] [-i <install dir>]
+HELP="Usage: $0 [-nd] [-b <backup file postfix>] [-e <exclude file>]
 
 Arguments:
       -b  Set backup postfix (default: make *.bak file)
           Set \"\" if backups are not necessary
+      -e  Set additional exclude file (default: ${exclude[@]})
       -n  Don't overwrite if file is already exist
       -d  Dry run, don't install anything
       -h  Print Help (this message) and exit
 "
-while getopts b:e:i:ndh OPT;do
+while getopts b:e:ndh OPT;do
   case $OPT in
     "b" ) backup=$OPTARG ;;
+    "e" ) exclude=(${exclude[@]} "$OPTARG") ;;
     "n" ) overwrite=0 ;;
     "d" ) dryrun=1 ;;
     "h" ) echo "$HELP" 1>&2; exit ;;
@@ -39,6 +42,17 @@ i=0
 while [ $i -lt ${#files[@]} ];do
   f=${files[$i]}
   d=${instdirs[$i]}
+  i=$(($i+1))
+  for e in ${exclude[@]};do
+    flag=0
+    if [ "$f" = "$e" ];then
+      flag=1
+      break
+    fi
+  done
+  if [ $flag = 1 ];then
+    continue
+  fi
   echo install $f to \"$d\"
   install=1
   if [ $dryrun -eq 1 ];then
@@ -61,7 +75,6 @@ while [ $i -lt ${#files[@]} ];do
   if [ $install -eq 1 ];then
     ln -s "$curdir/$f" "$d/$f"
   fi
-  i=$(($i+1))
 done
 echo ""
 if [ $dryrun -eq 1 ];then
