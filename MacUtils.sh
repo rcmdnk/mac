@@ -83,9 +83,28 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
 # }}}
 
+# Copy both alias (name) and mail address (default)
+defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
+# }}}
+
 # recent used application? {{{
 #defaults write com.apple.dock persistent-others -array-add '{{{ "tile-data" = {{{ "list-type" = 1; }}}; "tile-type" = "recents-tile"; }}}';killall Dock
 # }}}
+
+# Index on/off {{{
+## check volume's status (HDPS-U320 is external HDD)
+#$ mdutil -s "/Volumes/HDPS-U320"
+#  /:
+#          Indexing enabled.
+#
+## disable indexing (for main drive (Macintosh HD), need to be root)
+#$ mdutil -i off "/Volumes/HDPS-U320"
+#  /Volumes/HDPS-U320:
+#          Indexing disabled.
+## enable indexing (for main drive (Macintosh HD), need to be root)
+#$ mdutil -i on "/Volumes/HDPS-U320"
+#  /Volumes/HDPS-U320:
+#          Indexing enabled.
 
 # change wallpaper for Mission Control {{{
 ##change  /System/Library/CoreServices/Dock.app/Contents/Resources/defaultdesktop.png
