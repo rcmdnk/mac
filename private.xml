@@ -129,6 +129,12 @@
           <autogen>--KeyToKey-- KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>
         </item>
         <item>
+          <name>IME Switch SHIFT</name>
+          <appendix>SHIFT_L + SPACE to COMMAND_L + SPACE</appendix>
+          <identifier>private.ime_switch_SHIFT</identifier>
+          <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::SHIFT_L|ModifierFlag::NONE, KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>
+        </item>
+        <item>
           <name>Focus Dock by COMMAND_R+m</name>
           <identifier>private.cmd_M_to_focusDock</identifier>
           <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::COMMAND_R|ModifierFlag::NONE, KeyCode::F3, ModifierFlag::CONTROL_L</autogen>
