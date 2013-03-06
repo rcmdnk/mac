@@ -64,8 +64,8 @@
           <name>Swap COMMAND_L+Tab and OPTION_L+Tab, SHIFT_L + TAB to window switch</name>
           <identifier>private.swapTabs</identifier>
           <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::TAB, ModifierFlag::OPTION_L</autogen>
-          <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
-          <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L|ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+          <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L|ModifierFlag::NONE, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
+          <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
         </item>
         <item>
           <name>Mission Control</name>
