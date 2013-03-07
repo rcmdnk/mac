@@ -129,3 +129,11 @@ defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
 #~/Library/Services
 #}}}
 
+#Change character encoding {{{
+# nkf is not installed in Mac
+# but Mac has iconv/piconv
+# usage:
+# $ iconv -f utf-8 -t eucjp file # utf8->eucjp
+# $ piconv -f utf-8 -t eucjp file # utf8->eucjp
+#}}}
+
