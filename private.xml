@@ -233,7 +233,7 @@
               <identifier>private.iterm2.ime</identifier>
               <only>TERMINAL</only>
               <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
-              <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L</autogen>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L</autogen>
             </item>
           </list>
         </item>
