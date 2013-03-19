@@ -1,3 +1,6 @@
+# Tips
+# For boolean values, yes=true, no=false ?
+
 # hide .* files {{{
 # hide
 defaults write com.apple.finder AppleShowAllFiles -bool no;killall Finder
@@ -26,6 +29,13 @@ defaults write com.apple.dock expose-cluster-scale -float 1;killall Dock
 # disable
 #defaults delete com.apple.dock expose-cluster-scale -float 0;killall Dock
 # }}}
+
+# Show windows when scroll up on an incon on the dock {{{
+# enable
+defaults write com.apple.dock scroll-to-open -bool yes;killall Dock
+# disable
+defaults delete com.apple.dock scroll-to-open;killall Dock
+#}}}
 
 # disable to make MacOS catalogue file (.DS_Store) {{{
 # disable
@@ -62,6 +72,13 @@ defaults write com.apple.finder QLEnableTextSelection -bool true; killall Finder
 #defaults delete com.apple.finder QLEnableTextSelection -bool false; killall Finder
 # }}}
 
+# Stop Quick Look when move to other application {{{
+# Stop
+#defaults write com.apple.finder QLHidePanelOnDeactivate -bool true
+# Continue to show (default)
+#defaults delete com.apple.finder QLHidePanelOnDeactivate
+# }}}
+
 # disable dashboard {{{
 # disable
 defaults write com.apple.dashboard mcx-disabled -bool true;killall Dock
@@ -80,12 +97,57 @@ defaults write com.apple.screencapture disable-shadow -bool true;killall SystemU
 # Remove alias (name) and copy only mail address
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Copy both alias (name) and mail address (default)
-defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
+#defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
 # }}}
 
-# Copy both alias (name) and mail address (default)
-defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
+# Attachment in Mail.app {{{
+# Show attachment as is (default)
+defaults write com.apple.mail DisableInlineAttachmentViewing
+# Show attachment as a file icon
+#defaults write com.apple.mail DisableInlineAttachmentViewing 1
 # }}}
+
+# Change window's grab points to change window size {{{
+# Set to 10 (only outer region)
+#defaults -g AppleEdgeResizeExteriorSize 10 (pixel?)
+# Rest to Default
+#defaults delete -g AppleEdgeResizeExteriorSize
+# }}}
+
+# Change fonts {{{
+# Change a font in Finder
+#defaults write com.apple.finder NSSystemFont -string HuiFont
+# Rest to Default
+#defaults delete com.apple.finder NSSystemFont
+
+# Change a font in Title bar
+#defaults write com.apple.finder NSTitleBarFont -string HuiFont
+# Rest to Default
+#defaults delete com.apple.finder NSTitleBarFont
+
+# Change a font size in Title bar
+#defaults write com.apple.finder NSTitleBarFontSize 18
+# Rest to Default
+#defaults delete com.apple.finder
+
+# Change a font in Tool Tips
+#defaults write -g NSToolTipsFont -string HuiFont
+# Rest to Default
+#defaults delete -g NSToolTipsFont
+
+# Change a font size in Tool Tips
+#defaults write NSGlobalDomain NSToolTipsFontSize -int 18
+# Rest to Default
+#defaults delete NSGlobalDomain NSToolTipsFontSize
+# }}}
+
+# Finder's Quit Menu {{{
+# Show
+defaults write com.apple.Finder QuitMenuItem -bool true
+# Don't show (default)
+#defaults delete com.apple.Finder QuitMenuItem
+# }}}
+
 
 # recent used application? {{{
 #defaults write com.apple.dock persistent-others -array-add '{{{ "tile-data" = {{{ "list-type" = 1; }}}; "tile-type" = "recents-tile"; }}}';killall Dock
