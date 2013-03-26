@@ -30,11 +30,18 @@ defaults write com.apple.dock expose-cluster-scale -float 1;killall Dock
 #defaults delete com.apple.dock expose-cluster-scale -float 0;killall Dock
 # }}}
 
-# Show windows when scroll up on an incon on the dock {{{
+# Show windows when scroll up on an icon on the dock {{{
 # enable
 defaults write com.apple.dock scroll-to-open -bool yes;killall Dock
 # disable
-defaults delete com.apple.dock scroll-to-open;killall Dock
+#defaults delete com.apple.dock scroll-to-open;killall Dock
+#}}}
+
+# 2D/3D dock {{{
+# 2D
+defaults write com.apple.dock no-glass -bool true;killall Dock
+# 3D (glass effect)
+#defaults delete com.apple.dock no-glass;killall Dock
 #}}}
 
 # disable to make MacOS catalogue file (.DS_Store) {{{
