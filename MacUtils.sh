@@ -9,6 +9,14 @@ defaults write com.apple.finder AppleShowAllFiles -bool no;killall Finder
 #defaults write com.apple.finder AppleShowAllFiles -bool yes;killall Finder
 # }}}
 
+# Disable Desktop function {{{
+# disable
+#defaults write com.apple.finder CreateDesktop -bool no;killall Finder
+
+# enable
+#defaults delete com.apple.finder CreateDesktop;killall Finder
+# }}}
+
 # move to previous desktop space by 4 finger double tap {{{
 # enable
 #defaults write com.apple.dock double-tap-jump-back -bool true;killall Dock
