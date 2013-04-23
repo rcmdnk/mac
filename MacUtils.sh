@@ -1,12 +1,11 @@
 # Tips
 # For boolean values, yes=true, no=false ?
 
-# hide .* files {{{
-# hide
-defaults write com.apple.finder AppleShowAllFiles -bool no;killall Finder
-
+# show/hide .* files {{{
 # unhide
 #defaults write com.apple.finder AppleShowAllFiles -bool yes;killall Finder
+# hide
+defaults delete com.apple.finder AppleShowAllFiles;killall Finder # default
 # }}}
 
 # Disable Desktop function {{{
@@ -105,7 +104,14 @@ defaults write com.apple.dashboard mcx-disabled -bool true;killall Dock
 # remove
 defaults write com.apple.screencapture disable-shadow -bool true;killall SystemUIServer
 # add shadow
-#defaults delete com.apple.screencapture disable-shadow -bool false;killall SystemUIServer
+#defaults delete com.apple.screencapture disable-shadow;killall SystemUIServer
+# }}}
+
+# Set type of screen capture {{{
+# set to png
+defaults write com.apple.screencapture type jpg;killall SystemUIServer
+# set to default (png)
+#defaults delete com.apple.screencapture type;killall SystemUIServer
 # }}}
 
 # Mail address copy in Mail.app {{{
