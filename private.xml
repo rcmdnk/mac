@@ -2,11 +2,11 @@
 <root>
   <!-- application deficitions -->
   <appdef>
-    <appname>MacVim</appname>
+    <appname>MACVIM</appname>
     <equal>org.vim.MacVim</equal>
   </appdef>
   <appdef>
-    <appname>FileZilla</appname>
+    <appname>FILEZILLA</appname>
     <equal>de.filezilla </equal>
   </appdef>
   <!-- key mappings -->
@@ -15,12 +15,12 @@
       <name>MySetting</name>
       <list>
         <item>
-          <name>Without TERMINAL, TERMINAL, MacVim</name>
+          <name>Without TERMINAL, TERMINAL, MACVIM</name>
           <list>
             <item>
               <name>Copy and Paste, CONTROL_L+z/x/c/v to COMMAND_L+z/x/c/v (except for terminal, macvim, X11)</name>
               <identifier>private.woTerms.copyAndPaste</identifier>
-              <not>TERMINAL, TERMINAL, MacVim</not>
+              <not>TERMINAL, TERMINAL, MACVIM</not>
               <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
               <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::X, ModifierFlag::COMMAND_L</autogen>
               <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::C, ModifierFlag::COMMAND_L</autogen>
@@ -30,7 +30,7 @@
             <!-- <item>
               <name>CONTROL_L + D to ForwardDelete </name>
               <identifier>private.woTerms.ctr_d_to_ForwardDelete</identifier>
-              <not>TERMINAL, TERMINAL, MacVim</not>
+              <not>TERMINAL, TERMINAL, MACVIM</not>
               <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
             </item> -->
           </list>
@@ -198,7 +198,7 @@
             <item>
               <name>Delete</name>
               <identifier>private.filezilla.delete</identifier>
-              <only>FileZilla</only>
+              <only>FILEZILLA</only>
               <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::D, ModifierFlag::CONTROL_L</autogen>
             </item>
           </list>
@@ -227,15 +227,24 @@
               <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
               <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::COMMAND_R|ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
             </item>
+          </list>
+        </item>
+      </list>
+      <list>
+        <item>
+          <name>TERMINAL, MacVim</name>
+          <list>
             <item>
               <name>Esc to Esc+EISUU (IME off)</name>
               <appendix>Can be used with US keyboad, too</appendix>
-              <identifier>private.iterm2.ime</identifier>
+              <identifier>private.vim.ime</identifier>
               <only>TERMINAL</only>
-              <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
+              <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
               <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L</autogen>
+              <!-- <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen> -->
             </item>
           </list>
+
         </item>
       </list>
       <list>
