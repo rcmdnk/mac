@@ -120,12 +120,12 @@
               <not>POWERPOINT,WORD,EXCEL</not>
               <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
             </item> -->
-            <item>
+            <!-- <item>
               <name>CONTROL_L+h to Delete</name>
               <identifier>private.ctl_h_to_Delete</identifier>
               <not>POWERPOINT,WORD,EXCEL</not>
               <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::DELETE</autogen>
-            </item>
+            </item> -->
             <item>
               <name>Mission Control</name>
               <appendix>CONTROL_L+SHIFT_L+H/R to Move to Left/Right desk top</appendix>
@@ -158,6 +158,12 @@
                 KeyCode::T, ModifierFlag::COMMAND_L, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::SPACE, KeyCode::RETURN</autogen>
               <autogen>--KeyToKey-- KeyCode::MINUS, ModifierFlag::CONTROL_L|ModifierFlag::NONE,
                 KeyCode::T, ModifierFlag::COMMAND_L, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::SPACE, KeyCode::RETURN</autogen>
+            </item>
+            <item>
+              <name>Pasete and Match Formatting with Cmd+Shift+v (Word)</name>
+              <identifier>private.word_paste</identifier>
+              <only>WORD</only>
+              <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L|ModifierFlag::NONE, KeyCode::V, ModifierFlag::COMMAND_L|ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L</autogen>
             </item>
           </list>
         </item>
@@ -404,6 +410,11 @@
               <name>Disable COMMAND_L + H (to avoid hiding windows)</name>
               <identifier>private.comdl_h</identifier>
               <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+            </item>
+            <item>
+              <name>CONTROL_L+h to Delete</name>
+              <identifier>private.ctl_h_to_Delete</identifier>
+              <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::DELETE</autogen>
             </item>
           </list>
         </item>
