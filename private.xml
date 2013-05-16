@@ -240,12 +240,19 @@
         <item>
           <name>TERMINAL, MacVim</name>
           <list>
-            <item>
+            <!-- <item>
               <name>Esc to Esc+EISUU (IME off)</name>
               <appendix>Can be used with US keyboad, too</appendix>
               <identifier>private.vim.ime</identifier>
               <only>TERMINAL</only>
               <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L</autogen>
+            </item> -->
+            <item>
+              <name>CONTROL_L+BRACKET_LEFT to Esc+EISUU (IME off)</name>
+              <appendix>Can be used with US keyboad, too</appendix>
+              <identifier>private.vim.ime</identifier>
+              <only>TERMINAL</only>
               <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L</autogen>
               <!-- <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen> -->
             </item>
@@ -352,18 +359,18 @@
               <identifier>private.reboot</identifier>
               <autogen>--KeyToConsumer-- KeyCode::DELETE, ModifierFlag::COMMAND_L|ModifierFlag::CONTROL_L|ModifierFlag::NONE, ConsumerKeyCode::EJECT, ModifierFlag::COMMAND_L|ModifierFlag::CONTROL_L</autogen>
             </item> -->
-            <!-- <item>
-              <name>ESCAPE to Backquote </name>
+            <item>
+              <name>ESCAPE to Backquote (For HHK) </name>
               <identifier>private.ESC_to_BQ</identifier>
               <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::BACKQUOTE</autogen>
               <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::BACKQUOTE</autogen>
-            </item> -->
-            <!-- <item>
-              <name>SHIFT + ESCAPE to Tilda (SHIFT+BACKQUOTE)</name>
+            </item>
+            <item>
+              <name>SHIFT + ESCAPE to Tilda (SHIFT+BACKQUOTE) (For HHK)</name>
               <identifier>private.sft_ESC_to_sft_BQ</identifier>
               <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::SHIFT_L|ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
               <autogen>--KeyToKey-- KeyCode::ESCAPE, ModifierFlag::SHIFT_R|ModifierFlag::NONE, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R</autogen>
-            </item> -->
+            </item>
             <item>
               <name>IME Switch</name>
               <appendix>COMMAND_L + ESCAPE to COMMAND_L + SPACE</appendix>
