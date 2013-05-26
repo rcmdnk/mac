@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<root>
+  <autogen> <!-- y -->
+    __KeyToKey__ KeyCode::Y, ModifierFlag::NONE,
+    KeyCode::C, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    {{LINECOPY}}
+  </autogen>
+  <autogen> <!-- Y -->
+    __KeyToKey__ KeyCode::Y,
+    MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+    KeyCode::E, ModifierFlag::CONTROL_L|ModifierFlag::SHIFT_L,
+    KeyCode::C, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_line_copy,
+  </autogen>
+  <autogen> <!-- d -->
+    __KeyToKey__ KeyCode::D, ModifierFlag::NONE,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    {{LINECOPY}}
+  </autogen>
+  <autogen> <!-- D -->
+    __KeyToKey__ KeyCode::D,
+    MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+    KeyCode::E, ModifierFlag::CONTROL_L|ModifierFlag::SHIFT_L,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_line_copy,
+  </autogen>
+  <autogen> <!-- x -->
+    __KeyToKey__ KeyCode::X, ModifierFlag::NONE,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    {{LINECOPY}}
+  </autogen>
+  <autogen> <!-- X -->
+    __KeyToKey__ KeyCode::X,
+    MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+    KeyCode::E, ModifierFlag::CONTROL_L|ModifierFlag::SHIFT_L,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_line_copy,
+  </autogen>
+  <autogen> <!-- c -->
+    __KeyToKey__ KeyCode::D, ModifierFlag::NONE,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    {{LINECOPY}}
+  </autogen>
+  <autogen> <!-- C -->
+    __KeyToKey__ KeyCode::C,
+    MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+    KeyCode::E, ModifierFlag::CONTROL_L|ModifierFlag::SHIFT_L,
+    KeyCode::X, ModifierFlag::COMMAND_L,
+    {{VIM_EMU_ONLY_NORMAL_MODE}},
+    KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_line_copy,
+  </autogen>
+</root>

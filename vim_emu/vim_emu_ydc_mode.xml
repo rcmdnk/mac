@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<root>
+  <block>
+    <config_only>notsave.vim_emu_normal</config_only>
+    <autogen> <!-- Shift-{{CHAR}} -->
+      __KeyToKey__ KeyCode::{{CHAR}},
+      MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+      KeyCode::E, ModifierFlag::CONTROL_L|ModifierFlag::SHIFT_L,
+      {{AFTER}}
+    </autogen>
+    <!-- Start {{CHAR}} command -->
+    <block>
+      <config_not>notsave.vim_emu_{{CHAR}}</config_not>
+      <autogen>
+        __KeyToKey__ KeyCode::{{CHAR}}, ModifierFlag::NONE,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_normal,
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_{{CHAR}}
+      </autogen>
+    </block>
+  </block>
+
+  <block> <!-- {{CHAR}} MODE -->
+    <config_only>notsave.vim_emu_{{CHAR}}</config_only>
+    <autogen> <!-- {{CHAR}}{{CHAR}} -->
+      __KeyToKey__ KeyCode::{{CHAR}}, ModifierFlag::NONE,
+      KeyCode::A, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L,
+      {{AFTER}},
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_line_copy,
+    </autogen>
+    <include path="vim_emu_move.xml">
+      <replacementdef>
+        <replacementname>USE_SHIFT</replacementname>
+        <replacementvalue>
+          ModifierFlag::SHIFT_L|
+        </replacementvalue>
+      </replacementdef>
+    </include>
+    <include path="vim_emu_force_on_normal.xml"></include>
+  </block>
+</root>
