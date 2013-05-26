@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<root>
+  <!-- j/k -->
+  <autogen>
+    __KeyToKey__ KeyCode::J, ModifierFlag::NONE,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::NONE, {{AFTER}}
+  </autogen>
+  <autogen>
+    __KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::CURSOR_UP,
+    {{USE_SHIFT}}ModifierFlag::NONE, {{AFTER}}
+  </autogen>
+
+  <!-- Ctrl-u/Ctrl-d -->
+  <autogen>
+    __KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    {{AFTER}}
+  </autogen>
+  <autogen>
+    __KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L,
+    {{AFTER}}
+  </autogen>
+  <!-- Ctrl-b/Ctrl-f -->
+  <autogen>
+    __KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+    KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::OPTION_L|ModifierFlag::FN,
+    {{AFTER}}
+  </autogen>
+  <autogen>
+    __KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::OPTION_L|ModifierFlag::FN,
+    {{AFTER}}
+  </autogen>
+
+  <!-- G -->
+  <autogen>
+    __KeyToKey__ KeyCode::G,
+    MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+    KeyCode::CURSOR_DOWN, {{USE_SHIFT}}ModifierFlag::COMMAND_L, {{AFTER}}
+  </autogen>
+
+  <block> <!-- Command with g -->
+    <config_only>notsave.vim_emu_G</config_only>
+    <autogen> <!-- gg -->
+      __KeyToKey__ KeyCode::G, ModifierFlag::NONE,
+      KeyCode::CURSOR_UP, {{USE_SHIFT}}ModifierFlag::COMMAND_L,
+      {{AFTER}},
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_G,
+    </autogen>
+    <include path="vim_emu_force_on_normal.xml"></include>
+  </block> <!-- Command with g -->
+
+</root>
