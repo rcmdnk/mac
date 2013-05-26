@@ -2,40 +2,41 @@
 <root>
   <block>
     <config_only>notsave.vim_emu_normal</config_only>
-    <autogen> <!-- Shift-{{CHAR}} -->
-      __KeyToKey__ KeyCode::{{CHAR}},
+    <autogen> <!-- Shift-{{VIM_EMU_YDC_CHAR}} -->
+      __KeyToKey__ KeyCode::{{VIM_EMU_YDC_CHAR}},
       MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
       KeyCode::E, ModifierFlag::CONTROL_L|ModifierFlag::SHIFT_L,
-      {{AFTER}}
+      {{VIM_EMU_AFTER}}
     </autogen>
-    <!-- Start {{CHAR}} command -->
+    <!-- Start {{VIM_EMU_YDC_CHAR}} command -->
     <block>
-      <config_not>notsave.vim_emu_{{CHAR}}</config_not>
+      <config_not>notsave.vim_emu_{{VIM_EMU_YDC_CHAR}}</config_not>
       <autogen>
-        __KeyToKey__ KeyCode::{{CHAR}}, ModifierFlag::NONE,
+        __KeyToKey__ KeyCode::{{VIM_EMU_YDC_CHAR}}, ModifierFlag::NONE,
         KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_normal,
-        KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_{{CHAR}}
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_{{VIM_EMU_YDC_CHAR}},
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_oneshot
       </autogen>
     </block>
   </block>
 
-  <block> <!-- {{CHAR}} MODE -->
-    <config_only>notsave.vim_emu_{{CHAR}}</config_only>
-    <autogen> <!-- {{CHAR}}{{CHAR}} -->
-      __KeyToKey__ KeyCode::{{CHAR}}, ModifierFlag::NONE,
+  <block> <!-- {{VIM_EMU_YDC_CHAR}} MODE -->
+    <config_only>notsave.vim_emu_oneshot</config_only>
+    <config_only>notsave.vim_emu_{{VIM_EMU_YDC_CHAR}}</config_only>
+    <autogen> <!-- {{VIM_EMU_YDC_CHAR}}{{VIM_EMU_YDC_CHAR}} -->
+      __KeyToKey__ KeyCode::{{VIM_EMU_YDC_CHAR}}, ModifierFlag::NONE,
       KeyCode::A, ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L,
-      {{AFTER}},
+      {{VIM_EMU_AFTER}},
       KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_line_copy,
     </autogen>
     <include path="vim_emu_move.xml">
       <replacementdef>
-        <replacementname>USE_SHIFT</replacementname>
+        <replacementname>VIM_EMU_USE_SHIFT</replacementname>
         <replacementvalue>
           ModifierFlag::SHIFT_L|
         </replacementvalue>
       </replacementdef>
     </include>
-    <include path="vim_emu_force_on_normal.xml"></include>
   </block>
 </root>

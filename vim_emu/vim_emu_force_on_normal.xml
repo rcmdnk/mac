@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<root>
-  <include path="vim_emu_replace.xml">
-    <replacementdef>
-      <replacementname>REPLACE</replacementname>
-      <replacementvalue>{{VIM_EMU_FORCE_ON_NORMAL_MODE}}</replacementvalue>
-    </replacementdef>
-  </include>
-</root>

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<root>
-  <include path="vim_emu_replace.xml">
-    <replacementdef>
-      <replacementname>REPLACE</replacementname>
-      <replacementvalue>KeyCode::VK_NONE</replacementvalue>
-    </replacementdef>
-  </include>
-</root>

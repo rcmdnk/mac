@@ -4,7 +4,7 @@
     __KeyToKey__ KeyCode::Y, ModifierFlag::NONE,
     KeyCode::C, ModifierFlag::COMMAND_L,
     {{VIM_EMU_ONLY_NORMAL_MODE}},
-    {{LINECOPY}}
+    {{VIM_EMU_LINECOPY}}
   </autogen>
   <autogen> <!-- Y -->
     __KeyToKey__ KeyCode::Y,
@@ -18,7 +18,7 @@
     __KeyToKey__ KeyCode::D, ModifierFlag::NONE,
     KeyCode::X, ModifierFlag::COMMAND_L,
     {{VIM_EMU_ONLY_NORMAL_MODE}},
-    {{LINECOPY}}
+    {{VIM_EMU_LINECOPY}}
   </autogen>
   <autogen> <!-- D -->
     __KeyToKey__ KeyCode::D,
@@ -32,7 +32,7 @@
     __KeyToKey__ KeyCode::X, ModifierFlag::NONE,
     KeyCode::X, ModifierFlag::COMMAND_L,
     {{VIM_EMU_ONLY_NORMAL_MODE}},
-    {{LINECOPY}}
+    {{VIM_EMU_LINECOPY}}
   </autogen>
   <autogen> <!-- X -->
     __KeyToKey__ KeyCode::X,
@@ -46,7 +46,7 @@
     __KeyToKey__ KeyCode::D, ModifierFlag::NONE,
     KeyCode::X, ModifierFlag::COMMAND_L,
     {{VIM_EMU_ONLY_NORMAL_MODE}},
-    {{LINECOPY}}
+    {{VIM_EMU_LINECOPY}}
   </autogen>
   <autogen> <!-- C -->
     __KeyToKey__ KeyCode::C,
