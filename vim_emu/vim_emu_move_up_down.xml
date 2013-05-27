@@ -40,7 +40,7 @@
     KeyCode::CURSOR_UP, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
     KeyCode::CURSOR_UP, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
     KeyCode::CURSOR_UP, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
-    {{VIM_EMU_AFTER}}
+    {{VIM_EMU_AFTER_MOVE}}
   </autogen>
   <autogen>
     __KeyToKey__
@@ -55,8 +55,9 @@
     KeyCode::CURSOR_DOWN, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
     KeyCode::CURSOR_DOWN, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
     KeyCode::CURSOR_DOWN, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
-    {{VIM_EMU_AFTER}}
+    {{VIM_EMU_AFTER_MOVE}}
   </autogen>
+
   <!-- Ctrl-b/Ctrl-f -->
   <include path="vim_emu_repeat.xml">
     <replacementdef>
@@ -94,7 +95,7 @@
     __KeyToKey__ KeyCode::G,
     MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
     KeyCode::CURSOR_DOWN, {{VIM_EMU_USE_SHIFT}}ModifierFlag::COMMAND_L,
-    {{VIM_EMU_AFTER}}
+    {{VIM_EMU_AFTER_MOVE}}
   </autogen>
 
   <!-- Start g command -->
@@ -113,7 +114,7 @@
     <autogen> <!-- gg -->
       __KeyToKey__ KeyCode::G, ModifierFlag::NONE,
       KeyCode::CURSOR_UP, {{VIM_EMU_USE_SHIFT}}ModifierFlag::COMMAND_L,
-      {{VIM_EMU_AFTER}},
+      {{VIM_EMU_AFTER_MOVE}},
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_G,
     </autogen>
   </block> <!-- Command with g -->
