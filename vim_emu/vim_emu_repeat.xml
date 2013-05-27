@@ -10,7 +10,7 @@
           __KeyToKey__ {{VIM_EMU_REPEAT_INPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -20,7 +20,7 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -30,7 +30,7 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -41,7 +41,7 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -52,7 +52,7 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -64,7 +64,7 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -76,7 +76,7 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
       <block>
@@ -88,15 +88,16 @@
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_REPEAT_OUTPUT}}, {{VIM_EMU_REPEAT_OUTPUT}},
           {{VIM_EMU_RESET_REPEAT}},
-          {{VIM_EMU_AFTER}}
+          {{VIM_EMU_AFTER_MOVE}}
         </autogen>
       </block>
     </block>
   </block>
+
   <autogen>
     __KeyToKey__ {{VIM_EMU_REPEAT_INPUT}},
     {{VIM_EMU_REPEAT_OUTPUT}},
     {{VIM_EMU_RESET_REPEAT}},
-    {{VIM_EMU_AFTER}}
+    {{VIM_EMU_AFTER_MOVE}}
   </autogen>
 </root>

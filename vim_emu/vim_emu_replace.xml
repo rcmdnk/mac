@@ -84,6 +84,7 @@
   <autogen>__KeyToKey__ KeyCode::KEY_7, {{VIM_EMU_REPLACE}}</autogen>
   <autogen>__KeyToKey__ KeyCode::KEY_8, {{VIM_EMU_REPLACE}}</autogen>
   <autogen>__KeyToKey__ KeyCode::KEY_9, {{VIM_EMU_REPLACE}}</autogen>
+  <!--
   <autogen>__KeyToKey__ KeyCode::DELETE,          {{VIM_EMU_REPLACE}}</autogen>
   <autogen>__KeyToKey__ KeyCode::ENTER,           {{VIM_EMU_REPLACE}}</autogen>
   <autogen>__KeyToKey__ KeyCode::ENTER_POWERBOOK, {{VIM_EMU_REPLACE}}</autogen>
@@ -91,6 +92,7 @@
   <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE,  {{VIM_EMU_REPLACE}}</autogen>
   <autogen>__KeyToKey__ KeyCode::HELP,            {{VIM_EMU_REPLACE}}</autogen>
   <autogen>__KeyToKey__ KeyCode::RETURN,          {{VIM_EMU_REPLACE}}</autogen>
+  -->
   <autogen>__KeyToKey__ KeyCode::SPACE,           {{VIM_EMU_REPLACE}}</autogen>
   <!--
   <autogen>__KeyToKey__ KeyCode::TAB,             {{VIM_EMU_REPLACE}}</autogen>

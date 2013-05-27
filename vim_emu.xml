@@ -8,6 +8,7 @@
     <replacementname>VIM_EMU_IGNORE_APPS</replacementname>
     <replacementvalue>TERMINAL, VI, FIREFOX, EMACS</replacementvalue>
   </replacementdef>
+
   <item>
     <name>VIM Emulation</name>
     <include path="vim_emu/vim_emu_core.xml">
@@ -49,6 +50,8 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_Y,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_D,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_C,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
@@ -77,6 +80,8 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_Y,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_D,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_C,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
@@ -106,6 +111,8 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_Y,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_D,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_C,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
@@ -114,7 +121,7 @@
         </replacementvalue>
       </replacementdef>
       <replacementdef>
-        <replacementname>VIM_EMU_ONLY_NORMAL_MODE</replacementname>
+        <replacementname>VIM_EMU_FORCE_ON_NORMAL_WO_LINE</replacementname>
         <replacementvalue>
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_oneshot,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_repeat,
@@ -136,12 +143,14 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_Y,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_D,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_C,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
-          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_line_copy,
           KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu,
           KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_normal,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_line_copy,
         </replacementvalue>
       </replacementdef>
     </include>
@@ -202,6 +211,16 @@
       </item>
       <item>
         <name></name>
+        <identifier vk_config="true">notsave.vim_emu_R</identifier>
+        <autogen>__ShowStatusMessage__ -- VIM -- r</autogen>
+      </item>
+      <item>
+        <name></name>
+        <identifier vk_config="true">notsave.vim_emu_S_R</identifier>
+        <autogen>__ShowStatusMessage__ -- VIM -- R</autogen>
+      </item>
+      <item>
+        <name></name>
         <identifier vk_config="true">notsave.vim_emu_line_copy</identifier>
       </item>
       <item>
@@ -251,8 +270,20 @@
         <name>Application choice</name>
         <item>
           <appendix>
-            Choose applications on which you want to enable vim emulation.
+            <!--Choose applications on which you want to enable vim emulation.-->
           </appendix>
+          <appendix>
+            If you want to change applications, add replacement liens for VIM_EMU_ONLY_APPS and VIM_EMU_IGNORE_APPS at the top o of private.xml.
+            e.g.) Enable only for MAIL.
+          </appendix>
+          <appendix>&lt;replacementdef&gt;</appendix>
+          <appendix>  &lt;replacementname&gt;VIM_EMU_ONLY_APPS&lt;/replacementname&gt;</appendix>
+          <appendix>  &lt;replacementvalue&gt;MAIL&lt;/replacementvalue&gt;</appendix>
+          <appendix>&lt;/replacementdef&gt;</appendix>
+          <appendix>&lt;replacementdef&gt;</appendix>
+          <appendix>  &lt;replacementname&gt;VIM_EMU_IGNORE_APPS&lt;/replacementname&gt;</appendix>
+          <appendix>  &lt;replacementvalue&gt;&lt;/replacementvalue&gt;</appendix>
+          <appendix>&lt;/replacementdef&gt;</appendix>
         </item>
       </item>
       <item>
@@ -260,22 +291,23 @@
         <item>
           <appendix></appendix>
           <appendix>
-            i/I/a/A/o/O: Enter INSERT MODE (OS standard state) at under the cursor/start of the line/next to the cursor/end of the line/.
+            i/I/a/A/o/O: Enter INSERT Mode (OS standard state) at under the cursor/start of the line/next to the cursor/end of the line.
           </appendix>
           <appendix>
-            ESC/Ctrl-[: Enter VIM NORMAL MODE.
+            ESC/Ctrl-[: Enter VIM Normal Mode.
           </appendix>
           <appendix>
             next line/previous line.
           </appendix>
           <appendix>
-            c*/C: Change prefix also leads to enter INSERT MODE
+            c*/C: Change prefix also leads to enter INSERT Mode
           </appendix>
           <appendix>
-            v/V/Ctrl-v: Enter VISUAL/VISUAL LINE/VISUAL BLOCK MODE.
+            <!--v/V/Ctrl-v: Enter Visual/Visual Line/Visual Block Mode.-->
+            v/V: Enter Visual/Visual Line/Visual Mode.
           </appendix>
           <appendix>
-            ":" : Enter COMMAND MODE.
+            ":" : Enter Command Mode.
           </appendix>
           <appendix></appendix>
         </item>
@@ -293,7 +325,7 @@
         </item>
       </item>
       <item>
-        <name>NORMAL Mode</name>
+        <name>Normal Mode</name>
         <item>
           <name>Move</name>
           <item>
@@ -337,6 +369,7 @@
             <appendix>p/P: Paste to the next/current place.</appendix>
             <appendix>* If the copy/cut was done as line-wise (such "yy"), it pastes to the next/current line.</appendix>
             <appendix>u/C-r: Undo/Redo. U can be used as same as u, too.</appendix>
+            <appendix>r/R: Replace one/multi character/s.</appendix>
             <appendix>J: Combine two lines.</appendix>
             <appendix>/: Search.</appendix>
             <appendix>n/N: Search next/previous.</appendix>
@@ -345,14 +378,16 @@
         </item>
       </item>
       <item>
-        <name>VISUAL Mode</name>
+        <name>Visual Mode</name>
         <item>
           <name>Move</name>
           <item>
             <appendix></appendix>
-            <appendix>Most of Move commands in NORMAL MODE can be used.</appendix>
-            <appendix>For VISUAL BLOCK MODE, mouse key is used,</appendix>
+            <appendix>Most of Move commands in Normal Mode can be used.</appendix>
+            <!--
+            <appendix>For Visual Block Mode, mouse key is used,</appendix>
             <appendix>and it shows a bit different behavior.</appendix>
+            -->
             <appendix></appendix>
           </item>
         </item>
@@ -371,7 +406,7 @@
         </item>
       </item>
       <item>
-        <name>COMMAND Mode</name>
+        <name>Command Mode</name>
         <item>
           <appendix></appendix>
           <appendix>w"RETURN": Save </appendix>
