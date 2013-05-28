@@ -428,7 +428,6 @@
           __KeyToKey__ KeyCode::SLASH, ModifierFlag::NONE,
           KeyCode::F, ModifierFlag::COMMAND_L,
           {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-          KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu,
           KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu_search,
         </autogen>
         <autogen>
@@ -659,7 +658,7 @@
           </replacementdef>
         </include>
       </block>
-      <block> <!-- Replace Mode -->
+      <block> <!-- Replace Mode: Continuous -->
         <config_only>notsave.vim_emu_S_R</config_only>
         <include path="vim_emu_wrap.xml">
           <replacementdef>
