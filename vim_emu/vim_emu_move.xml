@@ -46,13 +46,30 @@
   <autogen>
     __KeyToKey__ KeyCode::A,
     MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
-    KeyCode::A, {{VIM_EMU_USE_SHIFT}}ModifierFlag::COMMAND_L,
+    KeyCode::A, {{VIM_EMU_USE_SHIFT}}ModifierFlag::CONTROL_L,
     {{VIM_EMU_AFTER_MOVE}}
   </autogen>
   <autogen>
     __KeyToKey__ KeyCode::E,
     MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
-    KeyCode::E, {{VIM_EMU_USE_SHIFT}}ModifierFlag::COMMAND_L,
+    KeyCode::E, {{VIM_EMU_USE_SHIFT}}ModifierFlag::CONTROL_L,
+    {{VIM_EMU_AFTER_MOVE}}
+  </autogen>
+
+  <!-- ^ -->
+  <autogen>
+    __KeyToKey__ KeyCode::KEY_6,
+    MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+    KeyCode::CURSOR_LEFT, {{VIM_EMU_USE_SHIFT}}ModifierFlag::COMMAND_L,
+    KeyCode::CURSOR_RIGHT, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_LEFT, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
+    {{VIM_EMU_AFTER_MOVE}}
+  </autogen>
+  <autogen>
+    __KeyToKey__ KeyCode::JIS_HAT, ModifierFlag::NONE,
+    KeyCode::CURSOR_LEFT, {{VIM_EMU_USE_SHIFT}}ModifierFlag::COMMAND_L,
+    KeyCode::CURSOR_RIGHT, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
+    KeyCode::CURSOR_LEFT, {{VIM_EMU_USE_SHIFT}}ModifierFlag::OPTION_L,
     {{VIM_EMU_AFTER_MOVE}}
   </autogen>
 
