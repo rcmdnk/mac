@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <root>
+  <include path="vim_emu.xml"></include>
   <!-- application deficitions -->
   <appdef>
     <appname>FILEZILLA</appname>
@@ -7,7 +8,6 @@
   </appdef>
   <!-- key mappings -->
   <list>
-    <include path="vim_emu.xml"></include>
     <item>
       <name>MySetting</name>
       <list>

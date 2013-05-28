@@ -1,8 +1,6 @@
 #!/bin/bash
-files=(private.xml vim_emu.xml vim_emu)
-instdirs=("$HOME/Library/Application Support/KeyRemap4MacBook"\
-  "$HOME/Library/Application Support/KeyRemap4MacBook"\
-  "$HOME/Library/Application Support/KeyRemap4MacBook")
+files=(private.xml)
+instdirs=("$HOME/Library/Application Support/KeyRemap4MacBook")
 exclude=("." ".." "README.md" "install.sh")
 
 backup="bak"
@@ -69,6 +67,7 @@ while [ $i -lt ${#files[@]} ];do
     elif [ $overwrite -eq 0 ];then
       install=0
     elif [ "$backup" != "" ];then
+      rm -rf "$d/${f}.$backup"
       mv "$d/$f" "$d/${f}.$backup"
     else
       rm "$d/$f"
