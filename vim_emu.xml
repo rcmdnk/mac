@@ -6,7 +6,7 @@
   </replacementdef>
   <replacementdef>
     <replacementname>VIM_EMU_IGNORE_APPS</replacementname>
-    <replacementvalue>TERMINAL, VI, FIREFOX, EMACS</replacementvalue>
+    <replacementvalue>TERMINAL, VI, PASSWORD, FIREFOX, EMACS</replacementvalue>
   </replacementdef>
 
   <item>
@@ -53,6 +53,7 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_search,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
         </replacementvalue>
@@ -83,6 +84,7 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_search,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_line_copy,
@@ -114,6 +116,7 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_search,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
           KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu,
@@ -146,6 +149,7 @@
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
           KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
+          KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_search,
           KeyCode::VK_LOCK_ALL_FORCE_OFF,
           KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
           KeyCode::VK_CONFIG_FORCE_ON_notsave_vim_emu,
@@ -229,6 +233,10 @@
       </item>
       <item>
         <name></name>
+        <identifier vk_config="true">notsave.vim_emu_search</identifier>
+      </item>
+      <item>
+        <name></name>
         <identifier vk_config="true">notsave.vim_emu_repeat</identifier>
       </item>
       <item>
@@ -268,154 +276,141 @@
       <name>Help</name>
       <item>
         <name>Application choice</name>
-        <item>
-          <appendix>
-            <!--Choose applications on which you want to enable vim emulation.-->
-          </appendix>
-          <appendix>
-            If you want to change applications, add replacement liens for VIM_EMU_ONLY_APPS and VIM_EMU_IGNORE_APPS at the top o of private.xml.
-            e.g.) Enable only for MAIL.
-          </appendix>
-          <appendix>&lt;replacementdef&gt;</appendix>
-          <appendix>  &lt;replacementname&gt;VIM_EMU_ONLY_APPS&lt;/replacementname&gt;</appendix>
-          <appendix>  &lt;replacementvalue&gt;MAIL&lt;/replacementvalue&gt;</appendix>
-          <appendix>&lt;/replacementdef&gt;</appendix>
-          <appendix>&lt;replacementdef&gt;</appendix>
-          <appendix>  &lt;replacementname&gt;VIM_EMU_IGNORE_APPS&lt;/replacementname&gt;</appendix>
-          <appendix>  &lt;replacementvalue&gt;&lt;/replacementvalue&gt;</appendix>
-          <appendix>&lt;/replacementdef&gt;</appendix>
-        </item>
+        <appendix>
+          <!--Choose applications on which you want to enable vim emulation.-->
+        </appendix>
+        <appendix>
+          If you want to change applications, add replacement liens for VIM_EMU_ONLY_APPS and VIM_EMU_IGNORE_APPS at the top o of private.xml.
+          e.g.) Enable only for MAIL.
+        </appendix>
+        <appendix>&lt;replacementdef&gt;</appendix>
+        <appendix>  &lt;replacementname&gt;VIM_EMU_ONLY_APPS&lt;/replacementname&gt;</appendix>
+        <appendix>  &lt;replacementvalue&gt;MAIL&lt;/replacementvalue&gt;</appendix>
+        <appendix>&lt;/replacementdef&gt;</appendix>
+        <appendix>&lt;replacementdef&gt;</appendix>
+        <appendix>  &lt;replacementname&gt;VIM_EMU_IGNORE_APPS&lt;/replacementname&gt;</appendix>
+        <appendix>  &lt;replacementvalue&gt;&lt;/replacementvalue&gt;</appendix>
+        <appendix>&lt;/replacementdef&gt;</appendix>
       </item>
       <item>
         <name>Main Mode Change</name>
-        <item>
-          <appendix></appendix>
-          <appendix>
-            i/I/a/A/o/O: Enter INSERT Mode (OS standard state) at under the cursor/start of the line/next to the cursor/end of the line.
-          </appendix>
-          <appendix>
-            ESC/Ctrl-[: Enter VIM Normal Mode.
-          </appendix>
-          <appendix>
-            next line/previous line.
-          </appendix>
-          <appendix>
-            c*/C: Change prefix also leads to enter INSERT Mode
-          </appendix>
-          <appendix>
-            <!--v/V/Ctrl-v: Enter Visual/Visual Line/Visual Block Mode.-->
-            v/V: Enter Visual/Visual Line/Visual Mode.
-          </appendix>
-          <appendix>
-            ":" : Enter Command Mode.
-          </appendix>
-          <appendix></appendix>
-        </item>
+        <appendix>
+          i/I/a/A/o/O: Enter Insert mode (OS standard state) at under the cursor/start of the line/next to the cursor/end of the line.
+        </appendix>
+        <appendix>
+          ESC/Ctrl-[: Enter VIM Normal mode.
+        </appendix>
+        <appendix>
+          next line/previous line.
+        </appendix>
+        <appendix>
+          c*/C: Change prefix also leads to enter Insert mode
+        </appendix>
+        <appendix>
+          v/V/Ctrl-v: Enter Visual/Visual Line/Visual Block mode.
+        </appendix>
+        <appendix>
+          :(colon) : Enter Command mode.
+        </appendix>
       </item>
       <item>
-        <name>INSERT Mode</name>
-        <item>
-          <appendix></appendix>
-          <appendix>Starting from this mode</appendix>
-          <appendix>ESC/Ctrl-[: Enter VIM Mode</appendix>
-          <appendix>Ctrl-n/p: Enter Complement Mode:</appendix>
-          <appendix>* In Complement Mode, use Ctrl-n/p to choose a candidate.</appendix>
-          <appendix>* Ctrl-h to skip, ESC/Ctrl-[ to choose a candidate.</appendix>
-          <appendix></appendix>
-        </item>
+        <name>Insert Mode</name>
+        <appendix></appendix>
+        <appendix>Starting from this mode</appendix>
+        <appendix>ESC/Ctrl-[: Enter VIM mode</appendix>
+        <appendix>Ctrl-n/p: Enter Complement mode:</appendix>
+        <appendix>* In Complement mode, use Ctrl-n/p to choose a candidate.</appendix>
+        <appendix>* Ctrl-h to skip, ESC/Ctrl-[ to choose a candidate.</appendix>
+        <appendix></appendix>
       </item>
       <item>
         <name>Normal Mode</name>
         <item>
           <name>Move</name>
-          <item>
-            <appendix></appendix>
-            <appendix></appendix>
-            <appendix>h/j/k/l: Left/Down/Up/Right.</appendix>
-            <appendix>
-              0/$ (C-a/C-e): Move to the first/end character of the line.
-            </appendix>
-            <appendix>
-              w/W/e/E: Move to the next word
-              (w/W: head of the word, e/E: end of the word).
-            </appendix>
-            <appendix>
-              b/B: Move to the previous word (b/B: head of the word).
-            </appendix>
-            <appendix>Ctrl-u/Ctrl-d: Go Up/Down 10 lines.</appendix>
-            <appendix>Ctrl-b/Ctrl-f: PageUp/PageDown.</appendix>
-            <appendix></appendix>
-          </item>
+          <appendix></appendix>
+          <appendix></appendix>
+          <appendix>h/j/k/l: Left/Down/Up/Right.</appendix>
+          <appendix>
+            0/$ (C-a/C-e): Move to the beggining/end of the line.
+          </appendix>
+          <appendix>
+            ^ : Move to the first non-blanck character of the line.
+          </appendix>
+          <appendix>
+            w/W/e/E: Move to the next word
+            (w/W: the beggining of the word, e/E: the end of the word).
+          </appendix>
+          <appendix>
+            b/B: Move to the previous word (b/B: the beggining of the word).
+          </appendix>
+          <appendix>Ctrl-u/Ctrl-d: Go Up/Down 10 lines.</appendix>
+          <appendix>Ctrl-b/Ctrl-f: PageUp/PageDown.</appendix>
+          <appendix></appendix>
         </item>
         <item>
           <name>Yank/Cut(Delete)/Change</name>
-          <item>
-            <appendix></appendix>
-            <appendix>yy/Y: Copy the line.</appendix>
-            <appendix>dd: Cut the line.</appendix>
-            <appendix>D: Cut from here to end the line.</appendix>
-            <appendix>cc: Change the line.</appendix>
-            <appendix>C: Change from here to end the line.</appendix>
-            <appendix>y/d/c+Move Command can be used.</appendix>
-            <appendix>e.g.) yw -> copy next one word.</appendix>
-            <appendix></appendix>
-          </item>
+          <appendix></appendix>
+          <appendix>yy/Y: Copy the line.</appendix>
+          <appendix>dd: Cut the line.</appendix>
+          <appendix>D: Cut from here to end the line.</appendix>
+          <appendix>cc: Change the line.</appendix>
+          <appendix>C: Change from here to end the line.</appendix>
+          <appendix>y/d/c+Move Command can be used.</appendix>
+          <appendix>e.g.) yw -> copy next one word.</appendix>
+          <appendix></appendix>
         </item>
         <item>
           <name>Others</name>
-          <item>
-            <appendix></appendix>
-            <appendix>x/X: Cut a character under/before the cursor.</appendix>
-            <appendix>p/P: Paste to the next/current place.</appendix>
-            <appendix>* If the copy/cut was done as line-wise (such "yy"), it pastes to the next/current line.</appendix>
-            <appendix>u/C-r: Undo/Redo. U can be used as same as u, too.</appendix>
-            <appendix>r/R: Replace one/multi character/s.</appendix>
-            <appendix>J: Combine two lines.</appendix>
-            <appendix>/: Search.</appendix>
-            <appendix>n/N: Search next/previous.</appendix>
-            <appendix></appendix>
+          <appendix></appendix>
+          <appendix>x/X: Cut a character under/before the cursor.</appendix>
+          <appendix>s/S: Delete/Cut a character/a line under the cursor and enter Insert mode.</appendix>
+          <appendix>p/P: Paste to the next/current place.</appendix>
+          <appendix>* If the copy/cut was done as line-wise (such "yy"), it pastes to the next/current line.</appendix>
+          <appendix>u/C-r: Undo/Redo. U can be used as same as u, too.</appendix>
+          <appendix>r/R: Replace one/multi character/s.</appendix>
+          <appendix>J: Combine two lines.</appendix>
+          <appendix>H/L/M: To line from top/bottom/middle of window.</appendix>
+          <appendix>.(period): Replace a following word with clipboard (different from normal vim).</appendix>
+          <appendix>/: Search.</appendix>
+          <appendix>n/N: Search next/previous.</appendix>
+          <appendix>*(asterisk): Search the word under the cursor.</appendix>
+          <appendix>ZZ: Save and Quit.</appendix>
+          <appendix>ZQ: Quit.</appendix>
+          <appendix></appendix>
           </item>
-        </item>
       </item>
       <item>
         <name>Visual Mode</name>
         <item>
           <name>Move</name>
-          <item>
-            <appendix></appendix>
-            <appendix>Most of Move commands in Normal Mode can be used.</appendix>
-            <!--
-            <appendix>For Visual Block Mode, mouse key is used,</appendix>
-            <appendix>and it shows a bit different behavior.</appendix>
-            -->
-            <appendix></appendix>
-          </item>
+          <appendix></appendix>
+          <appendix>Most of Move commands in Normal mode can be used.</appendix>
+          <appendix>For Visual Block mode, mouse key is used,</appendix>
+          <appendix>and it shows a bit different behavior.</appendix>
+          <appendix></appendix>
         </item>
         <item>
           <name>Yank/Cut/Change</name>
-          <item>
-            <appendix></appendix>
-            <appendix>y: Copy the selected region</appendix>
-            <appendix>Y: Copy the selected region + to the end of the line</appendix>
-            <appendix>d: Cut the selected region</appendix>
-            <appendix>D: Cut the selected region + to the end of the line</appendix>
-            <appendix>c: Change the selected region</appendix>
-            <appendix>C: Change the selected region + to the end of the line</appendix>
-            <appendix></appendix>
-          </item>
+          <appendix></appendix>
+          <appendix>y: Copy the selected region</appendix>
+          <appendix>Y: Copy the selected region + to the end of the line</appendix>
+          <appendix>d: Cut the selected region</appendix>
+          <appendix>D: Cut the selected region + to the end of the line</appendix>
+          <appendix>c: Change the selected region</appendix>
+          <appendix>C: Change the selected region + to the end of the line</appendix>
+          <appendix>*(asterisk): Search the selected word</appendix>
+          <appendix></appendix>
         </item>
       </item>
       <item>
         <name>Command Mode</name>
-        <item>
-          <appendix></appendix>
-          <appendix>w"RETURN": Save </appendix>
-          <appendix>w"SPACE": Save As</appendix>
-          <appendix>wq"RETURN": Save and Quiet</appendix>
-          <appendix>q"RETURN": Quiet</appendix>
-          <appendix>h"RETURN": Help of the application</appendix>
-          <appendix></appendix>
-        </item>
+        <appendix></appendix>
+        <appendix>w&lt;RETURN&gt;: Save </appendix>
+        <appendix>w&lt;SPACE&gt;: Save As</appendix>
+        <appendix>wq&lt;RETURN&gt;: Save and Quit</appendix>
+        <appendix>q&lt;RETURN&gt;: Quit</appendix>
+        <appendix>h&lt;RETURN&gt;: Help of the application</appendix>
+        <appendix></appendix>
       </item>
     </item>
   </item>
