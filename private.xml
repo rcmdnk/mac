@@ -12,23 +12,49 @@
       <name>MySetting</name>
       <list>
         <item>
-          <name>Without TERMINAL, TERMINAL</name>
+          <name>Without TERMINAL, VI</name>
           <list>
             <item>
-              <name>Copy and Paste, CONTROL+z/x/c/v to COMMAND+z/x/c/v (except for terminal, macvim, X11)</name>
+              <name>Copy and Paste, Control +z/x/c/v to Command +z/x/c/v (except for terminal, macvim, X11)</name>
               <identifier>private.woTerms.copyAndPaste</identifier>
               <not>TERMINAL, VI</not>
-              <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Z,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::Z, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::X,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::X, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::C,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::C, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::V,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::V, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Z,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::Z,
+                ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L
+              </autogen>
             </item>
             <!-- <item>
               <name>CONTROL + D to ForwardDelete </name>
               <identifier>private.woTerms.ctr_d_to_ForwardDelete</identifier>
               <not>TERMINAL, VI</not>
-              <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::FORWARD_DELETE
+              </autogen>
             </item> -->
           </list>
         </item>
@@ -36,38 +62,71 @@
           <name>Mail</name>
           <list>
             <item>
-              <name>(COMMAND or CONTROL)+SHIFT+v to COMMAND+OPTION+SHIFT+v (paste w/o style)</name>
+              <name>(Comamnd or Control)+ Shift +v to Command + Option + Shift + v (paste w/o style)</name>
               <identifier>private.mail.paste_wo_style</identifier>
               <only>MAIL</only>
-              <autogen>__KeyToKey__ KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::V,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::V, ModifierFlag::COMMAND_L|
+                ModifierFlag::SHIFT_L|ModifierFlag::OPTION_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::V,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::V,ModifierFlag::COMMAND_L|
+                ModifierFlag::SHIFT_L|ModifierFlag::OPTION_L
+              </autogen>
             </item>
             <item>
-              <name>COMMAND+OPTION+SHIFT+v to COMMAND+SHIFT+v (paste as quote)</name>
+              <name>Command + Option + Shift +v to Command + Shift + v (paste as quote)</name>
               <identifier>private.mail.paste_quote</identifier>
               <only>MAIL</only>
-              <autogen>__KeyToKey__ KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE, KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::V,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
+                KeyCode::V, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L
+              </autogen>
             </item>
             <!-- <item>
-              <name>COMMAND+SHIFT+CONTROL+u to COMMAND+SHIFT+u (unread/read change)</name>
+              <name>Command + Shift + Control + u to Command + Shift +u (unread/read change)</name>
               <appendix>COMMAND+SHIFT+u is used for window move</appendix>
               <identifier>private.mail.unreadread1</identifier>
               <only>MAIL</only>
-              <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::U, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L
+              </autogen>
             </item> -->
             <!-- <item>
-              <name>OPTION+SHIFT+u to COMMAND+SHIFT+u (unread/read change)</name>
+              <name>Option + Shift + u to Command + Shift +u (unread/read change)</name>
               <appendix>COMMAND+SHIFT+u is used for window move</appendix>
               <identifier>private.mail.unreadread2</identifier>
               <only>MAIL</only>
-              <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE, KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
+                KeyCode::U, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L
+              </autogen>
             </item> -->
             <item>
-              <name>COMMAND+u to COMMAND+SHIFT+u (unread/read change)</name>
+              <name>Command + u to Command + Shift +u (unread/read change)</name>
               <appendix>COMMAND+SHIFT+u is used for window move</appendix>
               <identifier>private.mail.unreadread3</identifier>
               <only>MAIL</only>
-              <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::U, ModifierFlag::COMMAND_L|ModifierFlag::SHIFT_L
+              </autogen>
             </item>
           </list>
         </item>
@@ -75,33 +134,63 @@
           <name>Firefox</name>
           <list>
             <item>
-              <name>Swap CONTROL+left click and COMMAND+left click</name>
+              <name>Swap Control + left click and Command + left click</name>
               <identifier>private.firefox.leftclick</identifier>
               <only>FIREFOX</only>
-              <autogen>__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __PointingButtonToPointingButton__ PointingButton::LEFT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL| ModifierFlag::NONE,
+                PointingButton::LEFT, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __PointingButtonToPointingButton__ PointingButton::LEFT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::LEFT, ModifierFlag::CONTROL_L</autogen>
             </item>
             <!-- <item>
-              <name>CONTROL+h to ForwardDelete</name>
+              <name>Control + h to ForwardDelete</name>
               <identifier>private.firefax.control_h_ForwardDelete</identifier>
               <only>FIREFOX</only>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::FORWARD_DELETE
+              </autogen>
             </item> -->
             <!-- <item>
-              <name>CONTROL+h to Delete</name>
+              <name>Control + h to Delete</name>
               <identifier>private.firefox.control_h_Delete</identifier>
               <only>FIREFOX</only>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::DELETE
+              </autogen>
             </item> -->
             <!-- <item>
               <name>TWiki countermeasure</name>
-              <name>CONTROL + P/H/B/F to CONTROL + Q/QUOTE/T/SEMICOLON </name>
+              <name>Control + P/H/B/F to Control + Q/QUOTE/T/SEMICOLON </name>
               <identifier>private.firefox.twikiCountermeasure</identifier>
               <only>FIREFOX</only>
-              <autogen>__KeyToKey__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::P,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::Q, ModifierFlag::CONTROL_L</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::QUOTE, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::B,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::T, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::F,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::SEMICOLON, ModifierFlag::CONTROL_L
+              </autogen>
             </item> -->
           </list>
         </item>
@@ -109,24 +198,41 @@
           <name>Without MS Office</name>
           <list>
             <!-- <item>
-              <name>CONTROL+h to ForwardDelete</name>
+              <name>Control + h to ForwardDelete</name>
               <identifier>private.ctl_H_to_FOWARDDELETE</identifier>
               <not>POWERPOINT,WORD,EXCEL</not>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::FORWARD_DELETE
+              </autogen>
             </item> -->
             <!-- <item>
-              <name>CONTROL+h to Delete</name>
+              <name>Control + h to Delete</name>
               <identifier>private.ctl_h_to_Delete</identifier>
               <not>POWERPOINT,WORD,EXCEL</not>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::DELETE
+              </autogen>
             </item> -->
             <item>
               <name>Mission Control</name>
-              <appendix>CONTROL+SHIFT+H/R to Move to Left/Right desk top</appendix>
+              <appendix>Control +Shift + h/l to Move to Left/Right desk top</appendix>
               <identifier>private.my_missioncontrol_wo_msoffice</identifier>
               <not>POWERPOINT,WORD,EXCEL</not>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::L,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L</autogen>
             </item>
           </list>
         </item>
@@ -135,29 +241,65 @@
           <list>
             <item>
               <name>Short cuts for MS Office</name>
-              <appendix>Choose 1 letter by CONTROL+space</appendix>
-              <appendix>Subscript by CONTROL + =</appendix>
-              <appendix>Superscript by CONTROL + -</appendix>
-              <appendix>Symbol by CONTROL|SHIFT + s</appendix>
-              <appendix>Helvetica by CONTROL|SHIFT + h</appendix>
+              <appendix>Choose 1 letter by Control + space</appendix>
+              <appendix>Subscript by Control + =</appendix>
+              <appendix>Superscript by Control + -</appendix>
+              <appendix>Symbol by Control|Shift + s</appendix>
+              <appendix>Helvetica by Control|Shift + h</appendix>
               <identifier>private.msoffice</identifier>
               <only>POWERPOINT,WORD,EXCEL</only>
-              <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
-                KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::TAB, KeyCode::TAB, KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::Y, KeyCode::M, KeyCode::B, KeyCode::O, KeyCode::L, KeyCode::TAB, KeyCode::RETURN</autogen>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
-                KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::TAB, KeyCode::TAB, KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::E, KeyCode::L, KeyCode::V, KeyCode::E, KeyCode::T, KeyCode::I, KeyCode::C, KeyCode::A, KeyCode::TAB, KeyCode::RETURN</autogen>
-              <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
-                KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
-              <autogen>__KeyToKey__ KeyCode::EQUAL, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
-                KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::SPACE, KeyCode::RETURN</autogen>
-              <autogen>__KeyToKey__ KeyCode::MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
-                KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::SPACE, KeyCode::RETURN</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::S,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::T, ModifierFlag::COMMAND_L,
+                KeyCode::TAB, KeyCode::TAB,
+                KeyCode::S, ModifierFlag::SHIFT_L, KeyCode::Y, KeyCode::M,
+                KeyCode::B, KeyCode::O, KeyCode::L,
+                KeyCode::TAB, KeyCode::RETURN
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::T, ModifierFlag::COMMAND_L, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::H, ModifierFlag::SHIFT_L, KeyCode::E, KeyCode::L,
+                KeyCode::V, KeyCode::E, KeyCode::T, KeyCode::I,
+                KeyCode::C, KeyCode::A,
+                KeyCode::TAB, KeyCode::RETURN
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_LEFT, ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>__KeyToKey__ KeyCode::EQUAL,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::T, ModifierFlag::COMMAND_L,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::SPACE, KeyCode::RETURN
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::MINUS,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::T, ModifierFlag::COMMAND_L,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB,
+                KeyCode::SPACE, KeyCode::RETURN
+              </autogen>
             </item>
             <item>
-              <name>Pasete and Match Formatting with Cmd+Shift+v (Word)</name>
+              <name>Pasete and Match Formatting with Command + Shift + v (Word)</name>
               <identifier>private.word_paste</identifier>
               <only>WORD</only>
-              <autogen>__KeyToKey__ KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::V,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::V, ModifierFlag::COMMAND_L|ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L</autogen>
             </item>
           </list>
         </item>
@@ -165,30 +307,46 @@
           <name>Finder</name>
           <list>
             <!-- <item>
-              <name>Return to COMMAND+O (opening it, instead of renaming)</name>
+              <name>Return to Command + o (opening it, instead of renaming)</name>
               <identifier>private.finder.RETURN_to_cmd_O</identifier>
               <only>FINDER</only>
               <autogen>__KeyToKey__ KeyCode::RETURN,ModifierFlag::NONE, KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
             </item> -->
             <item>
               <name>Forward/Back</name>
-              <appendix>CONTROL + I to CONTROL + O</appendix>
+              <appendix>Control + i to Control + o</appendix>
               <identifier>private.finder.forward_back</identifier>
               <only>FINDER</only>
-              <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
             <item>
-              <name>COMMAND + D to COMMAND + Delete</name>
+              <name>Command + d to Command + Delete</name>
               <only>FINDER</only>
               <identifier>private.finder.cmd_d_to_cmd_Delete</identifier>
-              <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::DELETE, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
             <item>
-              <name>COMMAND + 4 to COMMAND + W (need for XtraFinder)</name>
+              <name>Command + 4 to Command + w (need for XtraFinder)</name>
               <only>FINDER</only>
               <identifier>private.finder.cmd_4_to_cmd_w</identifier>
-              <autogen>__KeyToKey__ KeyCode::KEY_4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::KEY_4,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::W, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
           </list>
         </item>
@@ -199,63 +357,180 @@
               <name>Delete</name>
               <identifier>private.filezilla.delete</identifier>
               <only>FILEZILLA</only>
-              <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::D, ModifierFlag::CONTROL_L</autogen>
             </item>
           </list>
         </item> -->
         <item>
-          <name>TERMINAL</name>
+          <name>TERMINAL, VI</name>
           <list>
+            <!--
             <item>
               <name>Meta keys with Command (M-f, M-b, M-d, MC-h, M-Y, M-S-, M-S-., M-c, M-u)</name>
               <identifier>private.iterm2.meta</identifier>
-              <only>TERMINAL</only>
-              <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::COMMA, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::COMMA, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
-              <autogen>__KeyToKey__ KeyCode::DOT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::DOT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
-              <autogen>__KeyToKey__ KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-            </item>
-            <item>
-              <name>Disable COMMAND + w</name>
-              <identifier>private.iterm2.cmd_w</identifier>
-              <only>TERMINAL</only>
-              <autogen>__KeyToKey__ KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
-            </item>
-          </list>
-        </item>
-      </list>
-      <list>
-        <item>
-          <name>TERMINAL</name>
-          <list>
-            <!-- <item>
-              <name>Esc to Esc+EISUU (IME off)</name>
-              <appendix>Can be used with US keyboad, too</appendix>
-              <identifier>private.vim.ime</identifier>
               <only>TERMINAL, VI</only>
-              <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
-              <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-            </item> -->
+              <autogen>
+                __KeyToKey__ KeyCode::F,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::F, ModifierFlag::OPTION_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::B,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::B, ModifierFlag::OPTION_L</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::D, ModifierFlag::OPTION_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::H, ModifierFlag::OPTION_L|ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::Y, ModifierFlag::OPTION_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::COMMA,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::COMMA, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::DOT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::DOT, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::C,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::C, ModifierFlag::OPTION_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::U, ModifierFlag::OPTION_L
+              </autogen>
+            </item>
+            -->
             <item>
-              <name>CONTROL+BRACKET_LEFT to IME off (to English) + Esc + Esc</name>
+              <name>Command + (f, b, d, y, Ctrl-y, Ctrl-h, &lt;, &gt; c, u, ., _, ) to ESC + * </name>
+              <identifier>private.iterm2.meta</identifier>
+              <only>TERMINAL, VI</only>
+              <autogen>
+                __KeyToKey__ KeyCode::F,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::F
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::B,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::B
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::D
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::Y
+              </autogen>
+              <!-- Conflicted with Vim move
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::Y, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::H, ModifierFlag::CONTROL_L
+              </autogen>
+              -->
+              <autogen>
+                __KeyToKey__ KeyCode::COMMA,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::COMMA, ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::DOT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::DOT, ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::C,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::C
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::U
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::COMMA,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::COMMA
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::DOT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::DOT
+              </autogen>
+            </item>
+            <item>
+              <name>Disable Command + w</name>
+              <identifier>private.iterm2.cmd_w</identifier>
+              <only>TERMINAL, VI</only>
+              <autogen>
+                __KeyToKey__ KeyCode::W,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_NONE
+              </autogen>
+            </item>
+            <item>
+              <name>ESC to IME off (to English) + Esc + Esc</name>
+              <appendix>Enable for all but HHK</appendix>
+              <identifier>private.vim.ime_off_ESC</identifier>
+              <only>TERMINAL, VI</only>
+              <!-- UC_TECHNOLOGY's number is same as Topre Corpoartion (HHK) -->
+              <device_not>DeviceVendor::UC_TECHNOLOGY</device_not>
+              <inputsource_only>JAPANESE</inputsource_only>
+              <autogen>
+                __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
+                KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+                KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
+                KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+                KeyCode::ESCAPE, KeyCode::ESCAPE
+              </autogen>
+            </item>
+            <item>
+              <name>Control + BRACKET_LEFT to IME off (to English) + Esc + Esc</name>
               <identifier>private.vim.ime_new</identifier>
               <only>TERMINAL, VI</only>
               <inputsource_only>JAPANESE</inputsource_only>
-              <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH, KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE, KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::BRACKET_LEFT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+                KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
+                KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+                KeyCode::ESCAPE, KeyCode::ESCAPE
+              </autogen>
             </item>
-            <!-- <item>
-              <name>CONTROL+BRACKET_LEFT to Esc+EISUU (IME off)</name>
-              <appendix>Can be used with US keyboad, too</appendix>
-              <identifier>private.vim.ime</identifier>
-              <only>TERMINAL, VI</only>
-              <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen> -->
-              <!-- <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::JIS_EISUU, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen> -->
-              <!-- </item> -->
           </list>
 
         </item>
@@ -265,158 +540,386 @@
           <name>My General</name>
           <list>
             <item>
-              <name>VI mode with CONTROL+COMMAND</name>
-              <appendix>CONTROL+COMMAND+H/J/K/L to cursor Left/Down/Up/Right</appendix>
+              <name>VI mode with Control + Command</name>
+              <appendix>Control + Command + H/J/K/L to cursor Left/Down/Up/Right</appendix>
               <identifier>private.my_cursor</identifier>
-               <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::CURSOR_LEFT</autogen>
-               <autogen>__KeyToKey__ KeyCode::J, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::CURSOR_DOWN</autogen>
-               <autogen>__KeyToKey__ KeyCode::K, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::CURSOR_UP</autogen>
-               <autogen>__KeyToKey__ KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::CURSOR_RIGHT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::CURSOR_LEFT
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::J,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::CURSOR_DOWN
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::K,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::CURSOR_UP
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::L,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::CURSOR_RIGHT
+              </autogen>
             </item>
             <!-- <item>
               <name>Mouse Keys (right click to BRACKET_RIGHT)</name>
-              <appendix>CONTROL+COMMAND+Y/U/I/O to Left/Down/Up/Right</appendix>
-              <appendix>CONTROL+COMMAND+N/P/] to left/middle/right click</appendix>
+              <appendix>Control + Command + Y/U/I/O to Left/Down/Up/Right</appendix>
+              <appendix>Control + Command + N/P/] to left/middle/right click</appendix>
               <identifier>private.my_mousekeys_arrow</identifier>
-              <autogen>__KeyToKey__ KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_LEFT</autogen>
-              <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_DOWN</autogen>
-              <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_UP</autogen>
-              <autogen>__KeyToKey__ KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-              <autogen>__KeyToPointingButton__ KeyCode::N, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::LEFT</autogen>
-              <autogen>__KeyToPointingButton__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::MIDDLE</autogen>
-              <autogen>__KeyToPointingButton__ KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::RIGHT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_LEFT
+              </autogen>
+              <autogen>__KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_DOWN
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_UP
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_RIGHT
+              </autogen>
+              <autogen>
+                __KeyToPointingButton__ KeyCode::N,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::LEFT
+              </autogen>
+              <autogen>
+                __KeyToPointingButton__ KeyCode::P,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::MIDDLE
+              </autogen>
+              <autogen>
+                __KeyToPointingButton__ KeyCode::BRACKET_RIGHT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::RIGHT
+              </autogen>
             </item> -->
             <item>
               <name>Mouse Keys (right click to P)</name>
-              <appendix>CONTROL+COMMAND+Y/U/I/O to Left/Down/Up/Right</appendix>
-              <appendix>CONTROL+COMMAND+N/]/P to left/middle/right click</appendix>
-              <appendix>CONTROL+COMMAND+M/. to mouse wheel down/up</appendix>
+              <appendix>Control + Command + Y/U/I/O to Left/Down/Up/Right</appendix>
+              <appendix>Control + Command + N/]/P to left/middle/right click</appendix>
+              <appendix>Control + Command + M/. to mouse wheel down/up</appendix>
               <identifier>private.my_mousekeys_arrow_2</identifier>
-              <autogen>__KeyToKey__ KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_LEFT</autogen>
-              <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_DOWN</autogen>
-              <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_UP</autogen>
-              <autogen>__KeyToKey__ KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-              <autogen>__KeyToPointingButton__ KeyCode::N, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::LEFT</autogen>
-              <autogen>__KeyToPointingButton__ KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::MIDDLE</autogen>
-              <autogen>__KeyToPointingButton__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, PointingButton::RIGHT</autogen>
-              <autogen>__KeyToKey__ KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
-              <autogen>__KeyToKey__ KeyCode::COMMA, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_LEFT
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_DOWN
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_UP
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_RIGHT
+              </autogen>
+              <autogen>
+                __KeyToPointingButton__ KeyCode::N,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::LEFT
+              </autogen>
+              <autogen>__KeyToPointingButton__ KeyCode::BRACKET_RIGHT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::MIDDLE
+              </autogen>
+              <autogen>__KeyToPointingButton__ KeyCode::P,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                PointingButton::RIGHT
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::M,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_SCROLL_DOWN
+              </autogen>
+              <autogen>__KeyToKey__ KeyCode::COMMA,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_MOUSEKEY_SCROLL_UP
+              </autogen>
             </item>
             <item>
               <name>Window Move</name>
-              <appendix>COMMAND+SHIFT+Y/U/I/O to OPTION+SHIFT+Y/U/I/O</appendix>
+              <appendix>Control + Shift + U/I/O to Option + Shift + Y/U/I/O</appendix>
               <identifier>private.my_windowmove</identifier>
-               <autogen>__KeyToKey__ KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
-               <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
-               <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
-               <autogen>__KeyToKey__ KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::Y, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::U, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::I, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::O, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
              </item>
             <item>
-              <name>Swap COMMAND+Tab and OPTION+Tab, SHIFT + TAB to window switch</name>
+              <name>Swap Command + Tab and Option + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs</identifier>
-              <autogen>__KeyToKey__ KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
-              <autogen>__KeyToKey__ KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE, KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::TAB, ModifierFlag::OPTION_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::TAB, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
+                KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
             <item>
               <name>Mission Control</name>
-              <appendix>CONTROL+SHIFT+H/R to Move to Left/Right desk top</appendix>
+              <appendix>Control + Shift + h/l to Move to Left/Right desk top</appendix>
               <identifier>private.my_missioncontrol</identifier>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::L,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+              </autogen>
             </item>
             <item>
-              <name>Spotlight by COMMAND + CONTROL + f</name>
+              <name>Spotlight by Command + Control + f</name>
               <identifier>private.cmdl_ctrl_f_to_splotlight</identifier>
-              <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::F,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::SPACE, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_NONE
+              </autogen>
             </item>
             <!-- <item>
-              <name>Spotlight by OPTION + f</name>
+              <name>Spotlight by Option + f</name>
               <identifier>private.opt_f_to_splotlight</identifier>
-              <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE, KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
-              <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
+                KeyCode::SPACE, ModifierFlag::CONTROL_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_NONE
+              </autogen>
             </item> -->
             <!-- <item>
-              <name>Alfred by COMMAND + CONTROL + f</name>
+              <name>Alfred by Command + Control + f</name>
               <identifier>private.cmdl_ctrl_f_to_alfred</identifier>
-              <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::F,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::SPACE, ModifierFlag::OPTION_L</autogen>
             </item> -->
             <!-- <item>
-              <name>COMMAND + l to display sleep</name>
+              <name>Command + l to display sleep</name>
               <identifier>private.displaySleep</identifier>
-              <autogen>__KeyToConsumer__ KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, ConsumerKeyCode::EJECT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToConsumer__ KeyCode::L,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                ConsumerKeyCode::EJECT,
+                ModifierFlag::SHIFT_L|ModifierFlag::CONTROL_L
+              </autogen>
             </item> -->
             <item>
-              <name>OPTION_+ l to display sleep</name>
+              <name>Option + l to display sleep</name>
               <identifier>private.displaySleepOption</identifier>
-              <autogen>__KeyToConsumer__ KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE, ConsumerKeyCode::EJECT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToConsumer__ KeyCode::L,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
+                ConsumerKeyCode::EJECT,
+                ModifierFlag::SHIFT_L|ModifierFlag::CONTROL_L</autogen>
             </item>
             <!-- <item>
-              <name>COMMAND + CONTROL + DELETE to reboot</name>
+              <name>Command + Control + DELETE to reboot</name>
               <identifier>private.reboot</identifier>
-              <autogen>__KeyToConsumer__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, ConsumerKeyCode::EJECT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToConsumer__ KeyCode::DELETE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                ConsumerKeyCode::EJECT, ModifierFlag::COMMAND_L|ModifierFlag::CONTROL_L
+              </autogen>
             </item> -->
             <item>
-              <name>ESCAPE to Backquote (For HHK) </name>
+              <name>ESCAPE to Backquote (Only for HHK) </name>
+              <device_only>DeviceVendor::UC_TECHNOLOGY</device_only>
               <identifier>private.ESC_to_BQ</identifier>
-              <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::BACKQUOTE</autogen>
-              <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE, KeyCode::BACKQUOTE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
+                KeyCode::BACKQUOTE
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
+                KeyCode::BACKQUOTE
+              </autogen>
             </item>
             <item>
-              <name>SHIFT + ESCAPE to Tilda (SHIFT+BACKQUOTE) (For HHK)</name>
+              <name>Shift + ESCAPE to Tilda (SHIFT+BACKQUOTE) (Only for HHK)</name>
+              <device_only>DeviceVendor::UC_TECHNOLOGY</device_only>
               <identifier>private.sft_ESC_to_sft_BQ</identifier>
-              <autogen>__KeyToKey__ KeyCode::ESCAPE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::ESCAPE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L
+              </autogen>
             </item>
             <item>
               <name>IME Switch</name>
-              <appendix>COMMAND + ESCAPE to COMMAND + SPACE</appendix>
-              <appendix>COMMAND + BACKQUOTE to COMMAND + SPACE</appendix>
+              <appendix>Command + ESCAPE to Command + SPACE</appendix>
+              <appendix>Command + BACKQUOTE to Command + SPACE</appendix>
               <identifier>private.ime_switch</identifier>
-              <autogen>__KeyToKey__ KeyCode::ESCAPE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::ESCAPE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::SPACE, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::BACKQUOTE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::SPACE, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
             <!-- <item>
               <name>IME Switch SHIFT</name>
-              <appendix>SHIFT + SPACE to COMMAND + SPACE</appendix>
+              <appendix>Shift + SPACE to Command + SPACE</appendix>
               <identifier>private.ime_switch_SHIFT</identifier>
-              <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE, KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>
             </item> -->
             <item>
-              <name>Focus Dock by COMMAND+m</name>
+              <name>Focus Dock by Command + m</name>
               <identifier>private.cmd_M_to_focusDock</identifier>
-              <autogen>__KeyToKey__ KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::M,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::F3, ModifierFlag::CONTROL_L</autogen>
             </item>
             <item>
-              <name>CONTROL+[ to Esc</name>
+              <name>Control + [ to Esc</name>
               <identifier>private.ctl_[_to_Esc</identifier>
-              <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::ESCAPE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::BRACKET_LEFT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::ESCAPE
+              </autogen>
             </item>
             <!-- <item>
-              <name>COMMAND + D to Delete</name>
+              <name>Command + d to Delete</name>
               <identifier>private.cmd_d_to_Delete</identifier>
-              <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::DELETE
+              </autogen>
             </item> -->
             <item>
-              <name>COMMAND + D to COMMAND + Delete</name>
+              <name>Command + d to Command + Delete</name>
               <identifier>private.cmd_d_to_cmd_Delete</identifier>
-              <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::D,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::DELETE, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
             <item>
-              <name>COMMAND (R) + Left (Right) to COMMAND (R) + [ (]) (back/forward)</name>
+              <name>Command + Left (Right) to Command + [ (]) (back/forward)</name>
               <identifier>private.cmd_left_to_cmd_[</identifier>
-              <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-              <autogen>__KeyToKey__ KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::CURSOR_LEFT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::CURSOR_RIGHT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L
+              </autogen>
             </item>
             <item>
-              <name>Disable COMMAND + H (to avoid hiding windows)</name>
+              <name>Disable Command + h (to avoid hiding windows)</name>
               <identifier>private.comdl_h</identifier>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_NONE
+              </autogen>
             </item>
             <item>
-              <name>CONTROL+h to Delete</name>
+              <name>Control + h to Delete</name>
               <identifier>private.ctl_h_to_Delete</identifier>
-              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE, KeyCode::DELETE</autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::DELETE
+              </autogen>
             </item>
           </list>
         </item>
