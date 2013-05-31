@@ -422,7 +422,7 @@
             -->
             <item>
               <name>Command + (f, b, d, y, Ctrl-y, Ctrl-h, &lt;, &gt; c, u, ., _, ) to ESC + * </name>
-              <identifier>private.iterm2.meta</identifier>
+              <identifier>private.iterm2.escape_sequence</identifier>
               <only>TERMINAL, VI</only>
               <autogen>
                 __KeyToKey__ KeyCode::F,
