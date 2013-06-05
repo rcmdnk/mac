@@ -587,6 +587,16 @@
                 KeyCode::ESCAPE, KeyCode::ESCAPE
               </autogen>
             </item>
+            <item>
+              <name>Disable Command + t</name>
+              <identifier>private.iterm2.disable_newtab</identifier>
+              <only>TERMINAL, VI</only>
+              <autogen>
+                __KeyToKey__ KeyCode::T,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_NONE
+              </autogen>
+            </item>
           </list>
 
         </item>
@@ -1003,6 +1013,15 @@
                 __KeyToKey__ KeyCode::H,
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
                 KeyCode::DELETE
+              </autogen>
+            </item>
+            <item>
+              <name>Disable Command + p (print)</name>
+              <identifier>private.cmd_p</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::P,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_NONE
               </autogen>
             </item>
             <item>
