@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <root>
-  <include path="vim_emu.xml"></include>
+  <!-- <include path="vim_emu.xml"></include> -->
   <!-- application deficitions -->
   <appdef>
     <appname>FILEZILLA</appname>
@@ -345,6 +345,16 @@
               <autogen>
                 __KeyToKey__ KeyCode::KEY_4,
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::W, ModifierFlag::COMMAND_L
+              </autogen>
+            </item>
+            <item>
+              <name>Control + 4 to Command + w (need for XtraFinder)</name>
+              <only>FINDER</only>
+              <identifier>private.finder.ctr_4_to_cmd_w</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::KEY_4,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
                 KeyCode::W, ModifierFlag::COMMAND_L
               </autogen>
             </item>
@@ -806,6 +816,11 @@
                 __KeyToKey__ KeyCode::TAB,
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
                 KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND|ModifierFlag::NONE,
+                KeyCode::TAB, ModifierFlag::CONTROL_L
               </autogen>
             </item>
             <item>
