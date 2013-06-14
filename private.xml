@@ -750,7 +750,7 @@
             </item>
             <item>
               <name>Window Move</name>
-              <appendix>Control + Shift + U/I/O to Option + Shift + Y/U/I/O</appendix>
+              <appendix>Command + Shift + U/I/O to Option + Shift + Y/U/I/O</appendix>
               <identifier>private.my_windowmove</identifier>
               <autogen>
                 __KeyToKey__ KeyCode::Y,
@@ -776,7 +776,36 @@
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
                 KeyCode::O, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
               </autogen>
-             </item>
+            </item>
+            <item>
+              <name>Window Move</name>
+              <appendix>Control + Shift + U/I/O to Option + Shift + Y/U/I/O</appendix>
+              <identifier>private.my_windowmove_ctrl</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::Y, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                |MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::U, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::I, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT|ModifierFlag::NONE,
+                KeyCode::O, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
+              </autogen>
+            </item>
             <item>
               <name>Swap Command + Tab and Option + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs</identifier>
@@ -998,6 +1027,15 @@
               </autogen>
             </item>
             <item>
+              <name>Control + Delete to Command + Delete</name>
+              <identifier>private.cmd_Delete_to_cmd_Delete</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::DELETE,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::DELETE, ModifierFlag::COMMAND_L
+              </autogen>
+            </item>
+            <item>
               <name>Command + Left (Right) to Command + [ (]) (back/forward)</name>
               <identifier>private.cmd_left_to_cmd_[</identifier>
               <autogen>
@@ -1029,6 +1067,7 @@
                 KeyCode::DELETE
               </autogen>
             </item>
+            <!--
             <item>
               <name>Disable Command + p (print)</name>
               <identifier>private.cmd_p</identifier>
@@ -1038,6 +1077,7 @@
                 KeyCode::VK_NONE
               </autogen>
             </item>
+            -->
             <item>
               <name>Swap Ctrl-Cmd</name>
               <identifier>private.ctrl_cmd</identifier>
