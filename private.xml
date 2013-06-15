@@ -1084,7 +1084,7 @@
               <autogen> __KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_L </autogen>
               <autogen> __KeyToKey__ KeyCode::COMMAND_R, KeyCode::CONTROL_R </autogen>
               <autogen> __KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L </autogen>
-              <autogen> __KeyToKey__ KeyCode::CONTROL_R, KeyCode::COMMAND_R </autogen>
+              <!--<autogen> __KeyToKey__ KeyCode::CONTROL_R, KeyCode::COMMAND_R </autogen>-->
             </item>
           </list>
         </item>
