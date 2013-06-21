@@ -591,8 +591,6 @@
                 __KeyToKey__ KeyCode::BRACKET_LEFT,
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
                 KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
-                KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
-                KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
                 KeyCode::ESCAPE, KeyCode::ESCAPE
               </autogen>
             </item>
