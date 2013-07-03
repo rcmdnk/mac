@@ -804,7 +804,7 @@
                 KeyCode::O, ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L
               </autogen>
             </item>
-            <item>
+            <!-- <item>
               <name>Swap Command + Tab and Option + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs</identifier>
               <autogen>
@@ -823,7 +823,7 @@
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
                 KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
               </autogen>
-            </item>
+            </item> -->
             <item>
               <name>Swap Command + Tab and Option + Tab and Control + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs2</identifier>
@@ -997,7 +997,7 @@
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
                 KeyCode::F3, ModifierFlag::CONTROL_L</autogen>
             </item>
-            <item>
+            <!-- <item>
               <name>Control + [ to Esc</name>
               <identifier>private.ctl_[_to_Esc</identifier>
               <autogen>
@@ -1005,7 +1005,7 @@
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
                 KeyCode::ESCAPE
               </autogen>
-            </item>
+            </item> -->
             <!-- <item>
               <name>Command + d to Delete</name>
               <identifier>private.cmd_d_to_Delete</identifier>
@@ -1089,5 +1089,4 @@
       </list>
     </item>
   </list>
-  <include path="vim_emu.xml"></include>
 </root>
