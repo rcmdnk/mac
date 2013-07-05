@@ -935,15 +935,14 @@
             </item> -->
             <item>
               <name>ESCAPE to Backquote (Only for HHK) </name>
+              <appendix>Holding ESC to send ESC.</appendix>
               <device_only>DeviceVendor::UC_TECHNOLOGY</device_only>
               <identifier>private.ESC_to_BQ</identifier>
               <autogen>
-                __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
-                KeyCode::BACKQUOTE
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
-                KeyCode::BACKQUOTE
+                __HoldingKeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
+                KeyCode::BACKQUOTE,
+                KeyCode::VK_NONE,
+                KeyCode::ESCAPE, Option::NOREPEAT
               </autogen>
             </item>
             <item>
@@ -1089,4 +1088,5 @@
       </list>
     </item>
   </list>
+  <include path="vim_emu_test.xml"></include>
 </root>
