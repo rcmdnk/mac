@@ -23,6 +23,13 @@ defaults delete com.apple.finder AppleShowAllFiles;killall Finder # default
 defaults delete com.apple.dock double-tap-jump-back -bool false;killall Dock
 # }}}
 
+# Immutable Dock size {{{
+# enable
+#defaults write com.apple.dock size-immutable -boolean true;killall Dock
+# disable
+defaults delete com.apple.dock size-immutable;killall Dock
+# }}}
+
 # path bar in Finder starts from home directory {{{
 # enable
 #defaults write com.apple.finder PathBarRootAtHome -bool yes;killall Finder
