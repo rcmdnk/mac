@@ -128,6 +128,19 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 #defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
 # }}}
 
+# Change Language for Application{{{
+# Change to English for Mail.app
+defaults write com.apple.mail AppleLnguages "(English)"
+# can use "en", too.
+# Change to Japanese
+defaults write com.apple.mail AppleLnguages "(Japanese)"
+# can use "ja", too, but can't use "jp"
+# Use system default language
+defaults delete com.apple.mail AppleLnguages
+# Check set languages
+defaults find AppleLanguages
+# }}}
+
 # Attachment in Mail.app {{{
 # Show attachment as is (default)
 defaults write com.apple.mail DisableInlineAttachmentViewing
