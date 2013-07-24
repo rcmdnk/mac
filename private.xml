@@ -313,7 +313,8 @@
             </item> -->
             <item>
               <name>Forward/Back</name>
-              <appendix>Control + i to Control + o</appendix>
+              <appendix>Control + i/o to Forward/Back</appendix>
+              <appendix>Option +Right/Left to Forward/Back</appendix>
               <identifier>private.finder.forward_back</identifier>
               <only>FINDER</only>
               <autogen>
@@ -324,6 +325,16 @@
               <autogen>
                 __KeyToKey__ KeyCode::O,
                 MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+                KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::CURSOR_RIGHT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
+                KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::CURSOR_LEFT,
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION|ModifierFlag::NONE,
                 KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
               </autogen>
             </item>
