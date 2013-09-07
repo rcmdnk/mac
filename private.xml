@@ -52,7 +52,7 @@
               <autogen>
                 __KeyToKey__ KeyCode::Z,
                 VK_CONTROL|ModifierFlag::NONE,
-                KeyCode::Z, VK_COMMAND
+                KeyCode::Z, VK_COMMAND,
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::X,
@@ -62,7 +62,7 @@
               <autogen>
                 __KeyToKey__ KeyCode::C,
                 VK_CONTROL|ModifierFlag::NONE,
-                KeyCode::C, VK_COMMAND
+                KeyCode::C, VK_COMMAND,
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::V,
