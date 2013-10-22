@@ -871,7 +871,7 @@
               <name>Swap Command + Tab and Option + Tab and Control + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs2</identifier>
               <block>
-                <config_only>notsave.vim_emu_mode_usingTEST</config_only>
+                <config_only>notsave.vim_emu_mode_using{{VIM_EMU_ALTCONFIG}}</config_only>
                 <autogen>
                   __KeyToKey__ KeyCode::TAB,
                   VK_CONTROL|ModifierFlag::NONE,
@@ -1181,6 +1181,7 @@
             <item>
               <name>Disable Command + h (to avoid hiding windows)</name>
               <identifier>private.comdl_h</identifier>
+              <config_not>notsave.vim_emu_complement{{VIM_EMU_ALTCONFIG}}</config_not>
               <autogen>
                 __KeyToKey__ KeyCode::H, VK_COMMAND|ModifierFlag::NONE,
                 KeyCode::VK_NONE
@@ -1189,6 +1190,7 @@
             <item>
               <name>Control + h to Delete</name>
               <identifier>private.ctl_h_to_Delete</identifier>
+              <config_not>notsave.vim_emu_complement{{VIM_EMU_ALTCONFIG}}</config_not>
               <autogen>
                 __KeyToKey__ KeyCode::H, VK_CONTROL|ModifierFlag::NONE,
                 KeyCode::DELETE
