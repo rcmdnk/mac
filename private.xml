@@ -619,12 +619,9 @@
               <inputsource_only>JAPANESE</inputsource_only>
               <autogen>
                 __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
-                <!--
                 KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
                 KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
                 KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
-                -->
-                KeyCode::JIS_EISUU,
                 KeyCode::ESCAPE, KeyCode::ESCAPE
               </autogen>
             </item>
@@ -636,12 +633,9 @@
               <autogen>
                 __KeyToKey__ KeyCode::BRACKET_LEFT,
                 VK_CONTROL|ModifierFlag::NONE,
-                <!--
                 KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
                 KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
                 KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
-                -->
-                KeyCode::JIS_EISUU,
                 KeyCode::ESCAPE, KeyCode::ESCAPE
               </autogen>
             </item>
