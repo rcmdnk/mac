@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<root>
+  <!-- key mappings with vim_emu -->
+  <replacementdef>
+    <replacementname>VIM_EMU_FORCE_OFF_ALL_BUT_LINE</replacementname>
+    <replacementvalue>
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_oneshotTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_repeatTEST,
+      <!--
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_2TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_3TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_4TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_5TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_6TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_7TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_8TEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_9TEST,
+      -->
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_normalTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visualTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_lineTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_line_firstTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_blockTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_commandTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_GTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_YTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_DTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_CTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_RTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_RTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complementTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_searchTEST,
+      KeyCode::VK_LOCK_ALL_FORCE_OFF,
+      KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
+    </replacementvalue>
+  </replacementdef>
+  <list>
+    <item>
+      <name>MySetting with vim_emu</name>
+      <list>
+        <item>
+          <name>My General with vim_emu</name>
+          <list>
+            <item>
+              <name>Swap Command + Tab and Option + Tab and Control + Tab, Shift + TAB to window switch</name>
+              <identifier>private.swapTabs2_vim_emu</identifier>
+              <block>
+                <config_only>notsave.vim_emu_mode_using{{VIM_EMU_ALTCONFIG}}</config_only>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_CONTROL|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::TAB, VK_OPTION
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_COMMAND|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::TAB, VK_CONTROL
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_OPTION|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::BACKQUOTE, VK_COMMAND
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_SHIFT|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::TAB, VK_SHIFT
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_CONTROL,
+                  VK_SHIFT|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::TAB, VK_OPTION|VK_SHIFT
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_COMMAND|
+                  VK_SHIFT|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::TAB, VK_CONTROL|VK_SHIFT
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::TAB,
+                  VK_OPTION,
+                  VK_SHIFT|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::BACKQUOTE, VK_SHIFT|VK_COMMAND
+                </autogen>
+              </block>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::TAB, VK_OPTION
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::TAB, VK_CONTROL
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                VK_OPTION|ModifierFlag::NONE,
+                KeyCode::BACKQUOTE, VK_COMMAND
+              </autogen>
+              <autogen> <!-- This is somehow necessary to be before other *-Shift-Tab -->
+                __KeyToKey__ KeyCode::TAB,
+                VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::TAB, VK_SHIFT
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                VK_CONTROL,
+                VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::TAB, VK_OPTION|VK_SHIFT
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                VK_COMMAND|
+                VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::TAB, VK_CONTROL|VK_SHIFT
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::TAB,
+                VK_OPTION,
+                VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::BACKQUOTE, VK_SHIFT|VK_COMMAND
+              </autogen>
+            </item>
+            <item>
+              <name>Spotlight by Command + Control + f</name>
+              <identifier>private.cmdl_ctrl_f_to_splotlight_vim_emu</identifier>
+              <block>
+                <config_only>notsave.vim_emu_mode_usingTEST</config_only>
+                <autogen>
+                  __KeyToKey__ KeyCode::F,
+                  VK_CONTROL|
+                  VK_COMMAND|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::SPACE, VK_CONTROL
+                </autogen>
+              </block>
+              <block>
+                <autogen>
+                  __KeyToKey__ KeyCode::F,
+                  VK_CONTROL|
+                  VK_COMMAND|ModifierFlag::NONE,
+                  KeyCode::SPACE, VK_CONTROL
+                </autogen>
+                <autogen>
+                  __KeyToKey__ KeyCode::SPACE,
+                  VK_CONTROL|ModifierFlag::NONE,
+                  KeyCode::VK_NONE
+                </autogen>
+              </block>
+            </item>
+            <item>
+              <name>Disable Command + h (to avoid hiding windows)</name>
+              <identifier>private.comdl_h_vim_emu</identifier>
+              <config_not>notsave.vim_emu_complement{{VIM_EMU_ALTCONFIG}}</config_not>
+              <autogen>
+                __KeyToKey__ KeyCode::H, VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_NONE
+              </autogen>
+            </item>
+            <item>
+              <name>Control + h to Delete</name>
+              <identifier>private.ctl_h_to_Delete_vim_emu</identifier>
+              <config_not>notsave.vim_emu_complement{{VIM_EMU_ALTCONFIG}}</config_not>
+              <autogen>
+                __KeyToKey__ KeyCode::H, VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::DELETE
+              </autogen>
+            </item>
+          </list>
+        </item>
+      </list>
+    </item>
+  </list>
+</root>
