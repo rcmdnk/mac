@@ -1,7 +1,7 @@
 #!/bin/bash
-files=(private.xml)
-instdirs=("$HOME/Library/Application Support/KeyRemap4MacBook")
-exclude=("." ".." "README.md" "install.sh")
+files=("private.xml" "private.vim_emu.xml")
+instdirs=("$HOME/Library/Application Support/KeyRemap4MacBook" "$HOME/Library/Application Support/KeyRemap4MacBook")
+exclude=("." ".." "LICENSE" "README.md" "install.sh")
 
 backup="bak"
 overwrite=1

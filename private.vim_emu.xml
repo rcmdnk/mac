@@ -4,7 +4,6 @@
   <replacementdef>
     <replacementname>VIM_EMU_FORCE_OFF_ALL_BUT_LINE</replacementname>
     <replacementvalue>
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_oneshotTEST,
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_repeatTEST,
       <!--
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_2TEST,
@@ -46,33 +45,33 @@
               <name>Swap Command + Tab and Option + Tab and Control + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs2_vim_emu</identifier>
               <block>
-                <config_only>notsave.vim_emu_mode_using{{VIM_EMU_ALTCONFIG}}</config_only>
+                <config_only>notsave.vim_emu{{VIM_EMU_ALTCONFIG}}</config_only>
                 <autogen>
                   __KeyToKey__ KeyCode::TAB,
                   VK_CONTROL|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::TAB, VK_OPTION
                 </autogen>
                 <autogen>
                   __KeyToKey__ KeyCode::TAB,
                   VK_COMMAND|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::TAB, VK_CONTROL
                 </autogen>
                 <autogen>
                   __KeyToKey__ KeyCode::TAB,
                   VK_OPTION|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::BACKQUOTE, VK_COMMAND
                 </autogen>
                 <autogen>
                   __KeyToKey__ KeyCode::TAB,
                   VK_SHIFT|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::TAB, VK_SHIFT
                 </autogen>
                 <autogen>
@@ -80,7 +79,7 @@
                   VK_CONTROL,
                   VK_SHIFT|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::TAB, VK_OPTION|VK_SHIFT
                 </autogen>
                 <autogen>
@@ -88,7 +87,7 @@
                   VK_COMMAND|
                   VK_SHIFT|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::TAB, VK_CONTROL|VK_SHIFT
                 </autogen>
                 <autogen>
@@ -96,7 +95,7 @@
                   VK_OPTION,
                   VK_SHIFT|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::BACKQUOTE, VK_SHIFT|VK_COMMAND
                 </autogen>
               </block>
@@ -143,13 +142,13 @@
               <name>Spotlight by Command + Control + f</name>
               <identifier>private.cmdl_ctrl_f_to_splotlight_vim_emu</identifier>
               <block>
-                <config_only>notsave.vim_emu_mode_usingTEST</config_only>
+                <config_only>notsave.vim_emuTEST</config_only>
                 <autogen>
                   __KeyToKey__ KeyCode::F,
                   VK_CONTROL|
                   VK_COMMAND|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_mode_usingTEST,
+                  KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
                   KeyCode::SPACE, VK_CONTROL
                 </autogen>
               </block>
