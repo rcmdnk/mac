@@ -4,7 +4,6 @@
   <replacementdef>
     <replacementname>VIM_EMU_FORCE_OFF_ALL_BUT_LINE</replacementname>
     <replacementvalue>
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_repeatTEST,
       <!--
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_2TEST,
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_3TEST,
