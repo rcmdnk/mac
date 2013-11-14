@@ -4,21 +4,21 @@
   <replacementdef>
     <replacementname>VIM_EMU_FORCE_OFF_ALL_BUT_LINE</replacementname>
     <replacementvalue>
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_usingTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emuTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_normalTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visualTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_lineTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_line_firstTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_commandTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_GTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_YTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_DTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_CTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_RTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_RTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complementTEST,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_searchTEST,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_using,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_normal,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_line,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_visual_line_first,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_command,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_G,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_Y,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_D,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_C,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_R,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_S_R,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_complement,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_vim_emu_search,
       KeyCode::VK_LOCK_ALL_FORCE_OFF,
       KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF,
     </replacementvalue>
@@ -124,7 +124,7 @@
               <name>Spotlight by Command + Control + f</name>
               <identifier>private.cmdl_ctrl_f_to_splotlight_vim_emu</identifier>
               <block>
-                <config_only>notsave.vim_emu_usingTEST</config_only>
+                <config_only>notsave.vim_emu_using{{VIM_EMU_ALTCONFIG}}</config_only>
                 <autogen>
                   __KeyToKey__ KeyCode::F,
                   VK_CONTROL|
