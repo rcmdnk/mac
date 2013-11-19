@@ -1128,4 +1128,5 @@
     </item>
   </list>
   <include path="private.vim_emu.xml"></include>
+  <include path="vim_emu_test.xml"></include>
 </root>
