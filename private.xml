@@ -277,7 +277,8 @@
                 KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
-                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB,
                 KeyCode::SPACE, KeyCode::RETURN
               </autogen>
               <autogen>
@@ -286,7 +287,7 @@
                 KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
-                KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::SPACE, KeyCode::RETURN
               </autogen>
             </item>
