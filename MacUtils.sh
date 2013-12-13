@@ -189,6 +189,16 @@ defaults write com.apple.Finder QuitMenuItem -bool true
 #defaults delete com.apple.Finder QuitMenuItem
 # }}}
 
+# Trackpad, enable three finger swipe up/down {{{
+# Only for bluetooth one...?
+# Enable
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture  -float 1
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture  -float 1
+# Disable
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture  -float 0
+#defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture  -float 0
+# }}}
+
 
 # recent used application? {{{
 #defaults write com.apple.dock persistent-others -array-add '{{{ "tile-data" = {{{ "list-type" = 1; }}}; "tile-type" = "recents-tile"; }}}';killall Dock
