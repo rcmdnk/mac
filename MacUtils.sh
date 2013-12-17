@@ -8,6 +8,13 @@
 defaults delete com.apple.finder AppleShowAllFiles;killall Finder # default
 # }}}
 
+# show/hide file extensions {{{
+# show
+defaults write NSGlocalDomain AppleShowAllExtensions -bool true
+# hide
+#defaults write NSGlocalDomain AppleShowAllExtensions -bool false # default
+# }}}
+
 # Disable Desktop function {{{
 # disable
 #defaults write com.apple.finder CreateDesktop -bool no;killall Finder
@@ -51,11 +58,18 @@ defaults write com.apple.dock scroll-to-open -bool yes;killall Dock
 #defaults delete com.apple.dock scroll-to-open;killall Dock
 #}}}
 
-# 2D/3D dock {{{
-# 2D
-defaults write com.apple.dock no-glass -bool true;killall Dock
-# 3D (glass effect)
-#defaults delete com.apple.dock no-glass;killall Dock
+## 2D/3D dock # Doesn't work at Mavericks{{{
+## 2D
+#defaults write com.apple.dock no-glass -bool true;killall Dock
+## 3D (glass effect)
+##defaults delete com.apple.dock no-glass;killall Dock
+##}}}
+
+# transparent background {{{
+# Make it transparent
+defaults write com.apple.dock hide-mirror -bool true;killall Dock
+# Reverse
+#defaults delete com.apple.dock hide-mirror;killall Dock
 #}}}
 
 # disable to make MacOS catalogue file (.DS_Store) {{{
@@ -199,6 +213,14 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 #defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture  -float 0
 # }}}
 
+# Require password after sleep or screen saver
+# Enable
+defaults write com.apple.screensaver askForPassword -int 1
+# Disable
+defaults write com.apple.screensaver askForPassword -int 0
+# ask after 60 sec at screen saver
+defaults write com.apple.screensaver askForPasswordDelay -int 60
+# }}}
 
 # recent used application? {{{
 #defaults write com.apple.dock persistent-others -array-add '{{{ "tile-data" = {{{ "list-type" = 1; }}}; "tile-type" = "recents-tile"; }}}';killall Dock
@@ -250,3 +272,14 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 # $ piconv -f utf-8 -t eucjp file # utf8->eucjp
 #}}}
 
+
+# Key map {{{
+#echo "Make ⌘ + F focus the search input in iTunes"
+#defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+#}}}
+
+
+# Set Locale
+#defaults write NSGlobalDomain AppleLocale -string "en_US_POSIX"
+#defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+#defaults write NSGlobalDomain AppleMetricUnits -bool true
