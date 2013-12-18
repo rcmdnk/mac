@@ -283,3 +283,13 @@ defaults write com.apple.screensaver askForPasswordDelay -int 60
 #defaults write NSGlobalDomain AppleLocale -string "en_US_POSIX"
 #defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 #defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+# Disable sound at start up
+#sudo nvram SystemAudioVolume=%80
+
+# Disable Notification Center
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter
+
+# Temporary time to sleep (sec)
+caffeinate -t 3600
+
