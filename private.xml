@@ -1128,6 +1128,7 @@
       </list>
     </item>
   </list>
+  <!--
   <include path="private.vim_emu.xml">
     <replacementdef>
       <replacementname>VIM_EMU_ALTCONFIG</replacementname>
@@ -1135,4 +1136,6 @@
     </replacementdef>
   </include>
   <include path="vim_emu_test.xml"></include>
+  -->
+  <include path="private.vim_emu.xml"></include>
 </root>
