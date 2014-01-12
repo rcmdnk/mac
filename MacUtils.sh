@@ -213,7 +213,7 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 #defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture  -float 0
 # }}}
 
-# Require password after sleep or screen saver
+# Require password after sleep or screen saver {{{
 # Enable
 defaults write com.apple.screensaver askForPassword -int 1
 # Disable
@@ -240,6 +240,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 60
 #$ mdutil -i on "/Volumes/HDPS-U320"
 #  /Volumes/HDPS-U320:
 #          Indexing enabled.
+# }}}
 
 # change wallpaper for Mission Control {{{
 ##change  /System/Library/CoreServices/Dock.app/Contents/Resources/defaultdesktop.png
@@ -272,24 +273,34 @@ defaults write com.apple.screensaver askForPasswordDelay -int 60
 # $ piconv -f utf-8 -t eucjp file # utf8->eucjp
 #}}}
 
-
 # Key map {{{
 #echo "Make ⌘ + F focus the search input in iTunes"
 #defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 #}}}
 
 
-# Set Locale
+# Set Locale {{{
 #defaults write NSGlobalDomain AppleLocale -string "en_US_POSIX"
 #defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 #defaults write NSGlobalDomain AppleMetricUnits -bool true
+# }}}
 
-# Disable sound at start up
+# Disable sound at start up {{{
 #sudo nvram SystemAudioVolume=%80
+# }}}
 
-# Disable Notification Center
+# Disable Notification Center {{{
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter
+# }}}
 
-# Temporary time to sleep (sec)
+# Temporary time to sleep (sec) {{{
 caffeinate -t 3600
+# }}
+
+# {{{
+# Set screen shot prefix
+defaults write com.apple.screencapture name ""
+# set to default 
+#defaults delete com.apple.screencapture name
+# }}}
 
