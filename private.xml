@@ -252,20 +252,27 @@
                 VK_CONTROL|
                 VK_SHIFT|ModifierFlag::NONE,
                 KeyCode::T, VK_COMMAND,
-                KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::S, VK_SHIFT, KeyCode::Y, KeyCode::M,
                 KeyCode::B, KeyCode::O, KeyCode::L,
-                KeyCode::TAB, KeyCode::RETURN
+                KeyCode::TAB,
+                KeyCode::SPACE, KeyCode::SPACE,
+                KeyCode::RETURN
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::H,
                 VK_CONTROL|
                 VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::T, VK_COMMAND, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::T, VK_COMMAND,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::H, VK_SHIFT, KeyCode::E, KeyCode::L,
                 KeyCode::V, KeyCode::E, KeyCode::T, KeyCode::I,
                 KeyCode::C, KeyCode::A,
-                KeyCode::TAB, KeyCode::RETURN
+                KeyCode::TAB,
+                KeyCode::SPACE, KeyCode::SPACE,
+                KeyCode::RETURN
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::SPACE,
