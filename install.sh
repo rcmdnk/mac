@@ -76,6 +76,8 @@ while [ $i -lt ${#files[@]} ];do
     newlink=(${newlink[@]} "$f")
   fi
   if [ $install -eq 1 ];then
+    mkdir -p "$d"
+    echo ln -s "$curdir/$f" "$d/$f"
     ln -s "$curdir/$f" "$d/$f"
   fi
 done
