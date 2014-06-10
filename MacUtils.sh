@@ -5,7 +5,7 @@
 # unhide
 #defaults write com.apple.finder AppleShowAllFiles -bool yes;killall Finder
 # hide
-defaults delete com.apple.finder AppleShowAllFiles;killall Finder # default
+#defaults delete com.apple.finder AppleShowAllFiles;killall Finder # default
 # }}}
 
 # show/hide file extensions {{{
@@ -20,26 +20,26 @@ defaults write NSGlocalDomain AppleShowAllExtensions -bool true
 #defaults write com.apple.finder CreateDesktop -bool no;killall Finder
 
 # enable
-#defaults delete com.apple.finder CreateDesktop;killall Finder
+#defaults delete com.apple.finder CreateDesktop;killall Finder # default
 # }}}
 
 # move to previous desktop space by 4 finger double tap {{{
 # enable
-#defaults write com.apple.dock double-tap-jump-back -bool true;killall Dock
+#defaults write com.apple.dock double-tap-jump-back -bool true;killall Dock # default
 # disable
-defaults delete com.apple.dock double-tap-jump-back -bool false;killall Dock
+#defaults delete com.apple.dock double-tap-jump-back -bool false;killall Dock
 # }}}
 
 # Immutable Dock size {{{
 # enable
-#defaults write com.apple.dock size-immutable -boolean true;killall Dock
+#defaults write com.apple.dock size-immutable -boolean true;killall Dock # default
 # disable
-defaults delete com.apple.dock size-immutable;killall Dock
+#defaults delete com.apple.dock size-immutable;killall Dock
 # }}}
 
 # path bar in Finder starts from home directory {{{
 # enable
-#defaults write com.apple.finder PathBarRootAtHome -bool yes;killall Finder
+#defaults write com.apple.finder PathBarRootAtHome -bool yes;killall Finder # default
 # disable
 defaults delete com.apple.finder PathBarRootAtHome -bool no;killall Finder
 # }}}
@@ -48,70 +48,70 @@ defaults delete com.apple.finder PathBarRootAtHome -bool no;killall Finder
 # enable
 defaults write com.apple.dock expose-cluster-scale -float 1;killall Dock
 # disable
-#defaults delete com.apple.dock expose-cluster-scale -float 0;killall Dock
+#defaults delete com.apple.dock expose-cluster-scale -float 0;killall Dock # default
 # }}}
 
 # Show windows when scroll up on an icon on the dock {{{
 # enable
 defaults write com.apple.dock scroll-to-open -bool yes;killall Dock
 # disable
-#defaults delete com.apple.dock scroll-to-open;killall Dock
+#defaults delete com.apple.dock scroll-to-open;killall Dock # default
 #}}}
 
 ## 2D/3D dock # Doesn't work at Mavericks{{{
 ## 2D
 #defaults write com.apple.dock no-glass -bool true;killall Dock
 ## 3D (glass effect)
-##defaults delete com.apple.dock no-glass;killall Dock
+##defaults delete com.apple.dock no-glass;killall Dock # default
 ##}}}
 
 # transparent background {{{
 # Make it transparent
 defaults write com.apple.dock hide-mirror -bool true;killall Dock
 # Reverse
-#defaults delete com.apple.dock hide-mirror;killall Dock
+#defaults delete com.apple.dock hide-mirror;killall Dock # default
 #}}}
 
 # disable to make MacOS catalogue file (.DS_Store) {{{
 # disable
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # enable
-#defaults write com.apple.desktopservices DSDontWriteNetworkStores false
+#defaults write com.apple.desktopservices DSDontWriteNetworkStores false # default
 # }}}
 
 # show full path in title bar {{{
 # enable
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;killall Finder
 # disable
-#defaults delete com.apple.inder _FXShowPosixPathInTitle -bool false;killall Finder
+#defaults delete com.apple.inder _FXShowPosixPathInTitle -bool false;killall Finder # default
 # }}}
 
 # show Libary{{{
 # show
 chflags nohidden ~/Library/
 # hide
-#chflags hidden ~/Library/
+#chflags hidden ~/Library/ # default
 # }}}
 
 # XRayFolder (not valid for lion...) {{{
 # enable
 #defaults write com.apple.Finder QLEnableXRayFolders -bool true;killall Finder
 # disable
-#defaults delete com.apple.Finder QLEnableXRayFolders -bool false;killall Finder
+#defaults delete com.apple.Finder QLEnableXRayFolders -bool false;killall Finder # default
 # }}}
 
 # Enable copy in quick look {{{
 # enable
 defaults write com.apple.finder QLEnableTextSelection -bool true; killall Finder
 # disable
-#defaults delete com.apple.finder QLEnableTextSelection -bool false; killall Finder
+#defaults delete com.apple.finder QLEnableTextSelection -bool false; killall Finder # default
 # }}}
 
 # Stop Quick Look when move to other application {{{
 # Stop
-#defaults write com.apple.finder QLHidePanelOnDeactivate -bool true
+defaults write com.apple.finder QLHidePanelOnDeactivate -bool true
 # Continue to show (default)
-#defaults delete com.apple.finder QLHidePanelOnDeactivate
+#defaults delete com.apple.finder QLHidePanelOnDeactivate # default
 # }}}
 
 # disable dashboard {{{
@@ -125,11 +125,11 @@ defaults write com.apple.dashboard mcx-disabled -bool true;killall Dock
 # remove
 defaults write com.apple.screencapture disable-shadow -bool true;killall SystemUIServer
 # add shadow
-#defaults delete com.apple.screencapture disable-shadow;killall SystemUIServer
+#defaults delete com.apple.screencapture disable-shadow;killall SystemUIServer # default
 # }}}
 
 # Set type of screen capture {{{
-# set to png
+# set to jpg
 defaults write com.apple.screencapture type jpg;killall SystemUIServer
 # set to default (png)
 #defaults delete com.apple.screencapture type;killall SystemUIServer
@@ -139,7 +139,7 @@ defaults write com.apple.screencapture type jpg;killall SystemUIServer
 # Remove alias (name) and copy only mail address
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Copy both alias (name) and mail address (default)
-#defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true
+#defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true # default
 # }}}
 
 # Change Language for Application{{{
@@ -147,19 +147,19 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 defaults write com.apple.mail AppleLnguages "(English)"
 # can use "en", too.
 # Change to Japanese
-defaults write com.apple.mail AppleLnguages "(Japanese)"
+#defaults write com.apple.mail AppleLnguages "(Japanese)"
 # can use "ja", too, but can't use "jp"
 # Use system default language
-defaults delete com.apple.mail AppleLnguages
+#defaults delete com.apple.mail AppleLnguages
 # Check set languages
-defaults find AppleLanguages
+#defaults find AppleLanguages
 # }}}
 
 # Attachment in Mail.app {{{
 # Show attachment as is (default)
-defaults write com.apple.mail DisableInlineAttachmentViewing
+#defaults write com.apple.mail DisableInlineAttachmentViewing
 # Show attachment as a file icon
-#defaults write com.apple.mail DisableInlineAttachmentViewing 1
+defaults write com.apple.mail DisableInlineAttachmentViewing 1
 # }}}
 
 # Change window's grab points to change window size {{{
@@ -214,12 +214,12 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 # }}}
 
 # Require password after sleep or screen saver {{{
-# Enable
-defaults write com.apple.screensaver askForPassword -int 1
-# Disable
-defaults write com.apple.screensaver askForPassword -int 0
-# ask after 60 sec at screen saver
-defaults write com.apple.screensaver askForPasswordDelay -int 60
+## Enable
+#defaults write com.apple.screensaver askForPassword -int 1
+## Disable
+#defaults write com.apple.screensaver askForPassword -int 0
+## ask after 60 sec at screen saver
+#defaults write com.apple.screensaver askForPasswordDelay -int 60
 # }}}
 
 # recent used application? {{{
@@ -294,12 +294,12 @@ defaults write com.apple.screensaver askForPasswordDelay -int 60
 # }}}
 
 # Temporary time to sleep (sec) {{{
-caffeinate -t 3600
+#caffeinate -t 3600
 # }}
 
 # {{{
 # Set screen shot prefix
-defaults write com.apple.screencapture name ""
+#defaults write com.apple.screencapture name ""
 # set to default 
 #defaults delete com.apple.screencapture name
 # }}}

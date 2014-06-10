@@ -395,67 +395,14 @@
         <item>
           <name>TERMINAL, VI</name>
           <list>
-            <!--
             <item>
-              <name>Meta keys with Command (M-f, M-b, M-d, MC-h, M-Y, M-S-, M-S-., M-c, M-u)</name>
-              <identifier>private.iterm2.meta</identifier>
-              <only>TERMINAL, VI</only>
-              <autogen>
-                __KeyToKey__ KeyCode::F,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::F, VK_OPTION
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::B,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::B, VK_OPTION</autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::D,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::D, VK_OPTION
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::H,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::H, VK_OPTION|VK_CONTROL
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::Y,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::Y, VK_OPTION
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::COMMA,
-                VK_COMMAND|
-                VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::COMMA, VK_OPTION|VK_SHIFT
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::DOT,
-                VK_COMMAND|
-                VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::DOT, VK_OPTION|VK_SHIFT
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::C,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::C, VK_OPTION
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::U,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::U, VK_OPTION
-              </autogen>
-            </item>
-            -->
-            <item>
-              <name>Command + (f, b, d, y, l, c, u, r, g, q, s, Ctrl-d, ;, :, `, }, ], ), &lt;, &gt;, ., _, ) to ESC + * </name>
+              <name>Command + (alphabets w/o n, v, w), Ctrl-d, ;, :, `, }, ], ), &lt;, &gt;, ., _, ) to ESC + * </name>
               <identifier>private.iterm2.escape_sequence</identifier>
               <only>TERMINAL, VI</only>
               <autogen>
-                __KeyToKey__ KeyCode::F,
+                __KeyToKey__ KeyCode::A,
                 VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::F
+                KeyCode::ESCAPE, KeyCode::A
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::B,
@@ -463,34 +410,24 @@
                 KeyCode::ESCAPE, KeyCode::B
               </autogen>
               <autogen>
-                __KeyToKey__ KeyCode::D,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::D
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::Y,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::Y
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::L,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::L
-              </autogen>
-              <autogen>
                 __KeyToKey__ KeyCode::C,
                 VK_COMMAND|ModifierFlag::NONE,
                 KeyCode::ESCAPE, KeyCode::C
               </autogen>
               <autogen>
-                __KeyToKey__ KeyCode::U,
+                __KeyToKey__ KeyCode::D,
                 VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::U
+                KeyCode::ESCAPE, KeyCode::D
               </autogen>
               <autogen>
-                __KeyToKey__ KeyCode::R,
+                __KeyToKey__ KeyCode::E,
                 VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::R
+                KeyCode::ESCAPE, KeyCode::E
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::F,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::F
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::G,
@@ -498,9 +435,54 @@
                 KeyCode::ESCAPE, KeyCode::G
               </autogen>
               <autogen>
+                __KeyToKey__ KeyCode::H,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::H
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::I
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::J,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::J
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::K,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::K
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::L,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::L
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::M,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::M
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::O
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::P,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::P
+              </autogen>
+              <autogen>
                 __KeyToKey__ KeyCode::Q,
                 VK_COMMAND|ModifierFlag::NONE,
                 KeyCode::ESCAPE, KeyCode::Q
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::R,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::R
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::S,
@@ -508,9 +490,24 @@
                 KeyCode::ESCAPE, KeyCode::S
               </autogen>
               <autogen>
-                __KeyToKey__ KeyCode::S, VK_CONTROL|
+                __KeyToKey__ KeyCode::U,
                 VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::ESCAPE, KeyCode::S, VK_CONTROL
+                KeyCode::ESCAPE, KeyCode::U
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::X,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::X
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::Y
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::Z,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::ESCAPE, KeyCode::Z
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::SEMICOLON,
@@ -989,6 +986,10 @@
               <name>IME Switch</name>
               <appendix>Command + ESCAPE to Command + SPACE</appendix>
               <appendix>Command + BACKQUOTE to Command + SPACE</appendix>
+              <appendix>Control + SPACE to Command + Option + SPACE</appendix>
+              <appendix>Control + ESCAPE to Command + Option + SPACE</appendix>
+              <appendix>Control + BACKQUOTE to Command + Option + SPACE</appendix>
+              <appendix>Swap Cmd-Space - Cmd-Option-Space</appendix>
               <identifier>private.ime_switch</identifier>
               <autogen>
                 __KeyToKey__ KeyCode::ESCAPE,
@@ -999,6 +1000,33 @@
                 __KeyToKey__ KeyCode::BACKQUOTE,
                 VK_COMMAND|ModifierFlag::NONE,
                 KeyCode::SPACE, VK_COMMAND
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::SPACE, VK_COMMAND, VK_OPTION
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::BACKQUOTE,
+                VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::SPACE, VK_COMMAND, VK_OPTION
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::ESCAPE,
+                VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::SPACE, VK_COMMAND, VK_OPTION
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::SPACE,
+                VK_COMMAND|VK_OPTION|ModifierFlag::NONE,
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                VK_COMMAND|VK_OPTION|ModifierFlag::NONE,
+                KeyCode::SPACE,
+                VK_COMMAND|ModifierFlag::NONE,
               </autogen>
             </item>
             <!-- <item>
@@ -1064,6 +1092,7 @@
                 KeyCode::DELETE, VK_COMMAND
               </autogen>
             </item>
+            <!-- don't map cmd-left/right, which are used in PowerPoint
             <item>
               <name>Command + Left (Right) to Command + [ (]) (back/forward)</name>
               <identifier>private.cmd_left_to_cmd_[</identifier>
@@ -1078,7 +1107,23 @@
                 KeyCode::BRACKET_RIGHT, VK_COMMAND
               </autogen>
             </item>
-            <!--<item>
+            -->
+            <item>
+              <name>Option + Left (Right) to Command + [ (]) (back/forward)</name>
+              <identifier>private.opt_left_to_cmd_[</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::CURSOR_LEFT,
+                VK_OPTION|ModifierFlag::NONE,
+                KeyCode::BRACKET_LEFT, VK_COMMAND
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::CURSOR_RIGHT,
+                VK_OPTION|ModifierFlag::NONE,
+                KeyCode::BRACKET_RIGHT, VK_COMMAND
+              </autogen>
+            </item>
+            <!--
+            <item>
               <name>Disable Command + h (to avoid hiding windows)</name>
               <identifier>private.comdl_h</identifier>
               <autogen>
@@ -1106,22 +1151,6 @@
               </autogen>
             </item>
             -->
-            <item>
-              <name>Swap Cmd-Space - Cmd-Shift-Space</name>
-              <identifier>private.cmd-space</identifier>
-              <autogen>
-                __KeyToKey__ KeyCode::SPACE,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::SPACE,
-                VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::SPACE,
-                VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::SPACE,
-                VK_COMMAND|ModifierFlag::NONE,
-              </autogen>
-            </item>
             <item>
               <name>Swap Ctrl-Cmd</name>
               <identifier>private.ctrl_cmd</identifier>

@@ -42,6 +42,12 @@
                   KeyCode::TAB, VK_OPTION
                 </autogen>
                 <autogen>
+                  __KeyToKey__ KeyCode::SHIFT_L,
+                  VK_CONTROL|ModifierFlag::NONE,
+                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
+                  KeyCode::SHIFT_L, VK_OPTION
+                </autogen>
+                <autogen>
                   __KeyToKey__ KeyCode::TAB,
                   VK_COMMAND|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
