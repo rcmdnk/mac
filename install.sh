@@ -1,6 +1,7 @@
 #!/bin/bash
 files=("private.xml" "private.vim_emu.xml")
-instdirs=("$HOME/Library/Application Support/KeyRemap4MacBook" "$HOME/Library/Application Support/KeyRemap4MacBook")
+karabiner="$HOME/Library/Application Support/Karabiner"
+instdirs=("$karabiner" "$karabiner")
 exclude=("." ".." "LICENSE" "README.md" "install.sh")
 
 backup="bak"
