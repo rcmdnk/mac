@@ -140,6 +140,7 @@
                 KeyCode::VK_NONE
               </autogen>
             </item>
+            <!--
             <item>
               <name>Control + h to Delete</name>
               <identifier>private.ctl_h_to_Delete_vim_emu</identifier>
@@ -149,6 +150,7 @@
                 KeyCode::DELETE
               </autogen>
             </item>
+            -->
           </list>
         </item>
       </list>
