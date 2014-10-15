@@ -72,6 +72,13 @@ defaults write com.apple.dock hide-mirror -bool true;killall Dock
 #defaults delete com.apple.dock hide-mirror;killall Dock # default
 #}}}
 
+# Show/Hide dock immediately
+# Make it transparent
+#defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+# Reverse
+#defaults delete com.apple.dock autohidetime-modifier;killall Dock
+#}}}
+
 # disable to make MacOS catalogue file (.DS_Store) {{{
 # disable
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
@@ -134,6 +141,29 @@ defaults write com.apple.screencapture type jpg;killall SystemUIServer
 # set to default (png)
 #defaults delete com.apple.screencapture type;killall SystemUIServer
 # }}}
+
+# Set screen shot prefix {{{
+# need at least 1 character (otherwise no SS is created!)
+defaults write com.apple.screencapture name "ss";killall SystemUIServer
+# set to default 
+#defaults delete com.apple.screencapture name;killall SystemUIServer
+# }}}
+
+# Set screen shot name with date or not {{{
+# Add date # default is true, but name change overwrites it as false...?
+# If `defaults read com.apple.screencapture include-date` shows 0,
+# need to re-enable it if necessary.
+defaults write com.apple.screencapture include-date -bool true;killall SystemUIServer
+# set to default (this is also same as include-date = true)...
+#defaults delete com.apple.screencapture include-date;killall SystemUIServer
+# }}}
+
+# Set screen shot store directory {{{
+defaults write com.apple.screencapture location "~/Dropbox/スクリーンショット/"
+# set to default (Desktop)
+#defaults delete com.apple.screencapture location
+# }}}
+
 
 # Mail address copy in Mail.app {{{
 # Remove alias (name) and copy only mail address
@@ -296,11 +326,4 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 # Temporary time to sleep (sec) {{{
 #caffeinate -t 3600
 # }}
-
-# {{{
-# Set screen shot prefix
-#defaults write com.apple.screencapture name ""
-# set to default 
-#defaults delete com.apple.screencapture name
-# }}}
 
