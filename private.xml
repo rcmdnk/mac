@@ -193,6 +193,23 @@
             </item> -->
           </list>
         </item>
+        <!--
+        <item>
+          <name>Google Chrome</name>
+          <list>
+            <item>
+              <name>Ctrl-h to delete</name>
+              <identifier>private.chrome.delete</identifier>
+              <only>GOOGLE_CHROME</only>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::DELETE
+              </autogen>
+            </item>
+          </list>
+        </item>
+        -->
         <item>
           <name>Without MS Office</name>
           <list>
