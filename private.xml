@@ -1060,16 +1060,16 @@
               <identifier>private.cmd_M_to_focusDock</identifier>
               <autogen>
                 __KeyToKey__ KeyCode::M,
-                VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::F3, VK_CONTROL</autogen>
+                ModifierFlag::CONTROL_R|ModifierFlag::NONE,
+                KeyCode::F3, ModifierFlag::CONTROL_R</autogen>
             </item>
             <item>
               <name>Focus Dock by Control + m</name>
               <identifier>private.ctl_M_to_focusDock</identifier>
               <autogen>
                 __KeyToKey__ KeyCode::M,
-                VK_CONTROL|ModifierFlag::NONE,
-                KeyCode::F3, VK_CONTROL</autogen>
+                ModifierFlag::CONTROL_R|ModifierFlag::NONE,
+                KeyCode::F3, ModifierFlag::CONTROL_R</autogen>
             </item>
             <!-- <item>
               <name>Control + [ to Esc</name>
