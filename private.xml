@@ -1060,7 +1060,7 @@
               <identifier>private.cmd_M_to_focusDock</identifier>
               <autogen>
                 __KeyToKey__ KeyCode::M,
-                ModifierFlag::CONTROL_R|ModifierFlag::NONE,
+                ModifierFlag::COMMAND_R|ModifierFlag::NONE,
                 KeyCode::F3, ModifierFlag::CONTROL_R</autogen>
             </item>
             <item>
