@@ -13,7 +13,7 @@
           <name>My General with vim_emu</name>
           <list>
             <item>
-              <name>Swap Command + Tab and Option + Tab and Control + Tab, Shift + TAB to window switch</name>
+              <name>Wrap Control-Tab for vim_emu, Shift-Command-Tab/Command-Tab for prev/next tab</name>
               <identifier>private.swapTabs2_vim_emu</identifier>
               <block>
                 <config_only>notsave.vim_emu_using{{VIM_EMU_ALTCONFIG}}</config_only>
@@ -21,91 +21,18 @@
                   __KeyToKey__ KeyCode::TAB,
                   VK_CONTROL|ModifierFlag::NONE,
                   {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::TAB, VK_OPTION
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::SHIFT_L,
-                  VK_CONTROL|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::SHIFT_L, VK_OPTION
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::TAB,
-                  VK_COMMAND|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
                   KeyCode::TAB, VK_CONTROL
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::TAB,
-                  VK_OPTION|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::BACKQUOTE, VK_COMMAND
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::TAB,
-                  VK_SHIFT|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::TAB, VK_SHIFT
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::TAB,
-                  VK_CONTROL,
-                  VK_SHIFT|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::TAB, VK_OPTION|VK_SHIFT
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::TAB,
-                  VK_COMMAND|
-                  VK_SHIFT|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::TAB, VK_CONTROL|VK_SHIFT
-                </autogen>
-                <autogen>
-                  __KeyToKey__ KeyCode::TAB,
-                  VK_OPTION,
-                  VK_SHIFT|ModifierFlag::NONE,
-                  {{VIM_EMU_FORCE_OFF_ALL_BUT_LINE}},
-                  KeyCode::BACKQUOTE, VK_SHIFT|VK_COMMAND
                 </autogen>
               </block>
               <autogen>
                 __KeyToKey__ KeyCode::TAB,
-                VK_CONTROL|ModifierFlag::NONE,
-                KeyCode::TAB, VK_OPTION
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::TAB,
                 VK_COMMAND|ModifierFlag::NONE,
-                KeyCode::TAB, VK_CONTROL
+                KeyCode::CURSOR_RIGHT, VK_OPTION|VK_COMMAND
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::TAB,
-                VK_OPTION|ModifierFlag::NONE,
-                KeyCode::BACKQUOTE, VK_COMMAND
-              </autogen>
-              <autogen> <!-- This is somehow necessary to be before other *-Shift-Tab -->
-                __KeyToKey__ KeyCode::TAB,
-                VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::TAB, VK_SHIFT
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::TAB,
-                VK_CONTROL,
-                VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::TAB, VK_OPTION|VK_SHIFT
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::TAB,
-                VK_COMMAND|
-                VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::TAB, VK_CONTROL|VK_SHIFT
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::TAB,
-                VK_OPTION,
-                VK_SHIFT|ModifierFlag::NONE,
-                KeyCode::BACKQUOTE, VK_SHIFT|VK_COMMAND
+                VK_SHIFT|VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::CURSOR_LEFT, VK_OPTION|VK_COMMAND
               </autogen>
             </item>
             <item>
