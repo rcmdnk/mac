@@ -786,9 +786,10 @@
                 KeyCode::VK_MOUSEKEY_SCROLL_UP
               </autogen>
             </item>
+            <!--
             <item>
               <name>Window Move</name>
-              <appendix>Command + Shift + U/I/O to Option + Shift + Y/U/I/O</appendix>
+              <appendix>Command + Shift + Y/U/I/O to Option + Shift + Y/U/I/O</appendix>
               <identifier>private.my_windowmove</identifier>
               <autogen>
                 __KeyToKey__ KeyCode::Y,
@@ -844,6 +845,7 @@
                 KeyCode::O, VK_OPTION|VK_SHIFT
               </autogen>
             </item>
+            -->
             <!-- <item>
               <name>Swap Command + Tab and Option + Tab, Shift + TAB to window switch</name>
               <identifier>private.swapTabs</identifier>
