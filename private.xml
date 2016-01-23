@@ -235,7 +235,7 @@
             </item> -->
             <item>
               <name>Mission Control</name>
-              <appendix>Control +Shift + h/l to Move to Left/Right desk top</appendix>
+              <appendix>Control +Shift + h/l to Move to Left/Right desktop</appendix>
               <identifier>private.my_missioncontrol_wo_msoffice</identifier>
               <not>POWERPOINT,WORD,EXCEL</not>
               <autogen>
