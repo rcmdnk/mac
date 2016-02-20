@@ -646,6 +646,321 @@
       </list>
       <list>
         <item>
+          <name>Call AppleScript</name>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.close</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/close.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.closeToDock</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/closeToDock.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.focusMenu</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/focusMenu.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.moveForMon</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/moveForMon.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveLeft</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowMoveLeft.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveDown</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowMoveDown.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveUp</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowMoveUp.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveRight</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowMoveRight.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.wsFull</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/wsFull.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalf</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/wsHalf.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfBottom</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/wsHalfBottom.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfLeft</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/wsHalfLeft.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfRight</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/wsHalfRight.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfTop</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/wsHalfTop.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.moveForMonAll</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/moveForMonAll.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenLeft</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/winMoveScreenLeft.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenDown</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/winMoveScreenDown.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenUp</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/winMoveScreenUp.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenRight</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/winMoveScreenRight.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeWidthMinus</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowResizeWidthMinus.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeHeightPlus</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowResizeHeightPlus.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeHeightMinus</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowResizeHeightMinus.scpt ]]>
+            </url>
+          </vkopenurldef>
+          <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeWidthPlus</name>
+            <url type="shell">
+              <![CDATA[ osascript ~/Library/Scripts/windowResizeWidthPlus.scpt ]]>
+            </url>
+          </vkopenurldef>
+
+          <list>
+            <item>
+              <name>Cmd-4 to Window close</name>
+              <identifier>private.cmd_4_to_win_close</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::KEY_4,
+                VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.close
+              </autogen>
+            </item>
+            <item>
+              <name>Ctrl-4 to Window close</name>
+              <identifier>private.ctrl_4_to_win_close</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::KEY_4,
+                VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.close
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Ctrl-A to close to Dock</name>
+              <identifier>private.cmd_ctrl_a_to_close_to_dock</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::A,
+                VK_CONTROL|VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.closeToDock
+              </autogen>
+            </item>
+            <item>
+              <name>Opt-Space to focus Menu</name>
+              <identifier>private.opt_space_to_focusMenu</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::SPACE,
+                VK_OPTION|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.focusMenu
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Ctrl-. to moveForMon</name>
+              <identifier>private.cmd_ctrl_._to_moveForMon</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::DOT,
+                VK_CONTROL|VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.moveForMon
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Shift-Y/U/I/O to window move</name>
+              <identifier>private.cmd_shift_yuio_to_windowMove</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveLeft
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveDown
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveUp
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowMoveRight
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Ctrl-Return to window size full</name>
+              <identifier>private.cmd_ctrl_enter_to_wsFull</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::RETURN,
+                VK_CONTROL|VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.wsFull
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Ctrl-Shift-Return to window size half</name>
+              <identifier>private.cmd_ctrl_enter_to_wsHalf</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::RETURN,
+                VK_CONTROL|VK_COMMAND|VK_SHIFT|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalf
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Shift-H/J/K/L to window size half at left/bottom/top/right</name>
+              <appendix>It is enabled even if Ctrl is pushed at the same time.</appendix>
+              <identifier>private.cmd_shift_jhlk_to_wshalf</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::H,
+                VK_COMMAND|VK_SHIFT,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfLeft
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::J,
+                VK_COMMAND|VK_SHIFT,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfBottom
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::K,
+                VK_COMMAND|VK_SHIFT,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfTop
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::L,
+                VK_COMMAND|VK_SHIFT,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.wsHalfRight
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Ctrl-/ to moveForMonAll</name>
+              <identifier>private.cmd_ctrl_slash_to_moveForMonAll</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::SLASH,
+                VK_CONTROL|VK_COMMAND|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.moveForMonAll
+              </autogen>
+            </item>
+            <item>
+              <name>Cmd-Shift-Ctrl-Y/U/I/O to move window to other screen</name>
+              <identifier>private.cmd_shift_ctrl_yuio_to_window_to_other_screen</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                VK_COMMAND|VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenLeft
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                VK_COMMAND|VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenDown
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                VK_COMMAND|VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenUp
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                VK_COMMAND|VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.winMoveScreenRight
+              </autogen>
+            </item>
+            <item>
+              <name>Shift-Ctrl-Y/U/I/O to move window resize</name>
+              <identifier>private.cmd_shift_ctrl_yuio_to_window_resize</identifier>
+              <autogen>
+                __KeyToKey__ KeyCode::Y,
+                VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeWidthMinus
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::U,
+                VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeHeightPlus
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::I,
+                VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeHeightMinus
+              </autogen>
+              <autogen>
+                __KeyToKey__ KeyCode::O,
+                VK_SHIFT|VK_CONTROL|ModifierFlag::NONE,
+                KeyCode::VK_OPEN_URL_APPLESCRIPT.windowResizeWidthPlus
+              </autogen>
+            </item>
+          </list>
+        </item>
+      </list>
+      <list>
+        <item>
           <name>My General</name>
           <list>
             <item>
