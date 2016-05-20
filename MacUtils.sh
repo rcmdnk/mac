@@ -3,7 +3,7 @@
 
 # show/hide .* files {{{
 # unhide
-#defaults write com.apple.finder AppleShowAllFiles -bool yes;killall Finder
+#defaults write com.apple.finder AppleShowAllFiles true;killall Finder
 # hide
 #defaults delete com.apple.finder AppleShowAllFiles;killall Finder # default
 # }}}
@@ -12,12 +12,16 @@
 # show
 defaults write NSGlocalDomain AppleShowAllExtensions -bool true
 # hide
-#defaults write NSGlocalDomain AppleShowAllExtensions -bool false # default
+#defaults write NSGlocalDomain AppleShowAllExtensions -bool true # default
+# }}}
+
+# Reduce transparency {{{
+defaults write "com.apple.universalaccess" "reduceTransparency" -bool true
 # }}}
 
 # Disable Desktop function {{{
 # disable
-#defaults write com.apple.finder CreateDesktop -bool no;killall Finder
+#defaults write com.apple.finder CreateDesktop -bool true;killall Finder
 
 # enable
 #defaults delete com.apple.finder CreateDesktop;killall Finder # default
@@ -27,21 +31,21 @@ defaults write NSGlocalDomain AppleShowAllExtensions -bool true
 # enable
 #defaults write com.apple.dock double-tap-jump-back -bool true;killall Dock # default
 # disable
-#defaults delete com.apple.dock double-tap-jump-back -bool false;killall Dock
+#defaults delete com.apple.dock double-tap-jump-back -bool true;killall Dock
 # }}}
 
 # Immutable Dock size {{{
 # enable
-#defaults write com.apple.dock size-immutable -boolean true;killall Dock # default
+#defaults write com.apple.dock size-immutable -bool true;killall Dock # default
 # disable
 #defaults delete com.apple.dock size-immutable;killall Dock
 # }}}
 
 # path bar in Finder starts from home directory {{{
 # enable
-#defaults write com.apple.finder PathBarRootAtHome -bool yes;killall Finder # default
+#defaults write com.apple.finder PathBarRootAtHome -bool true;killall Finder # default
 # disable
-defaults delete com.apple.finder PathBarRootAtHome -bool no;killall Finder
+defaults delete com.apple.finder PathBarRootAtHome -bool true;killall Finder
 # }}}
 
 # enlarge window size for mission control, when scroll up mouse, or swipe up with two fingers {{{
@@ -53,10 +57,19 @@ defaults write com.apple.dock expose-cluster-scale -float 1;killall Dock
 
 # Show windows when scroll up on an icon on the dock {{{
 # enable
-defaults write com.apple.dock scroll-to-open -bool yes;killall Dock
+defaults write com.apple.dock scroll-to-open -bool true;killall Dock
 # disable
 #defaults delete com.apple.dock scroll-to-open;killall Dock # default
 #}}}
+
+# Show scroll bar (WhenScrolling, Automatic, Always) {{{
+defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
+#}}}
+
+# Set sidebar icon size: {{{
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+#}}}
+
 
 ## 2D/3D dock # Doesn't work at Mavericks{{{
 ## 2D
@@ -81,16 +94,16 @@ defaults write com.apple.dock hide-mirror -bool true;killall Dock
 
 # disable to make MacOS catalogue file (.DS_Store) {{{
 # disable
-defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # enable
-#defaults write com.apple.desktopservices DSDontWriteNetworkStores false # default
+#defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true # default
 # }}}
 
 # show full path in title bar {{{
 # enable
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;killall Finder
 # disable
-#defaults delete com.apple.inder _FXShowPosixPathInTitle -bool false;killall Finder # default
+#defaults delete com.apple.inder _FXShowPosixPathInTitle -bool true;killall Finder # default
 # }}}
 
 # show Libary{{{
@@ -104,14 +117,14 @@ chflags nohidden ~/Library/
 # enable
 #defaults write com.apple.Finder QLEnableXRayFolders -bool true;killall Finder
 # disable
-#defaults delete com.apple.Finder QLEnableXRayFolders -bool false;killall Finder # default
+#defaults delete com.apple.Finder QLEnableXRayFolders -bool true;killall Finder # default
 # }}}
 
 # Enable copy in quick look {{{
 # enable
 defaults write com.apple.finder QLEnableTextSelection -bool true; killall Finder
 # disable
-#defaults delete com.apple.finder QLEnableTextSelection -bool false; killall Finder # default
+#defaults delete com.apple.finder QLEnableTextSelection -bool true; killall Finder # default
 # }}}
 
 # Stop Quick Look when move to other application {{{
@@ -125,7 +138,7 @@ defaults write com.apple.finder QLHidePanelOnDeactivate -bool true
 # disable
 defaults write com.apple.dashboard mcx-disabled -bool true;killall Dock
 # enable
-#defaults delete com.apple.dashboard mcx-disabled -bool false;killall Dock
+#defaults delete com.apple.dashboard mcx-disabled -bool true;killall Dock
 # }}}
 
 # remove shadow from screen shot {{{
@@ -167,7 +180,7 @@ defaults write com.apple.screencapture location "~/Dropbox/スクリーンショ
 
 # Mail address copy in Mail.app {{{
 # Remove alias (name) and copy only mail address
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool true
 # Copy both alias (name) and mail address (default)
 #defaults delete com.apple.mail AddressesIncludeNameOnPasteboard -bool true # default
 # }}}
@@ -317,13 +330,21 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 
 # Disable sound at start up {{{
 #sudo nvram SystemAudioVolume=%80
-# }}}
+#}}}
 
 # Disable Notification Center {{{
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter
-# }}}
+#}}}
 
 # Temporary time to sleep (sec) {{{
 #caffeinate -t 3600
-# }}
+#}}}
 
+#  Aboid to create .DS_Store {{{
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+#}}}
+
+# Disable auto correct {{{
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+#}}}
