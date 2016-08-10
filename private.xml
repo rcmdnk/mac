@@ -270,8 +270,10 @@
                 VK_SHIFT|ModifierFlag::NONE,
                 KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::S, VK_SHIFT, KeyCode::Y, KeyCode::M,
                 KeyCode::B, KeyCode::O, KeyCode::L,
+                KeyCode::TAB,
                 KeyCode::RETURN
               </autogen>
               <autogen>
@@ -280,9 +282,11 @@
                 VK_SHIFT|ModifierFlag::NONE,
                 KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
                 KeyCode::H, VK_SHIFT, KeyCode::E, KeyCode::L,
                 KeyCode::V, KeyCode::E, KeyCode::T, KeyCode::I,
                 KeyCode::C, KeyCode::A,
+                KeyCode::TAB,
                 KeyCode::RETURN
               </autogen>
               <autogen>
@@ -294,21 +298,19 @@
                 VK_CONTROL|ModifierFlag::NONE,
                 KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
-                KeyCode::KEY_3, KeyCode::KEY_0, KeyCode::RETURN
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::SPACE, KeyCode::RETURN
               </autogen>
               <autogen>
                 __KeyToKey__ KeyCode::MINUS,
                 VK_CONTROL|ModifierFlag::NONE,
                 KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
-                KeyCode::MINUS, KeyCode::KEY_2, KeyCode::KEY_5, KeyCode::RETURN
-              </autogen>
-              <autogen>
-                __KeyToKey__ KeyCode::KEY_0,
-                VK_CONTROL|ModifierFlag::NONE,
-                KeyCode::T, VK_COMMAND,
                 KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
-                KeyCode::KEY_0, KeyCode::RETURN
+                KeyCode::TAB, KeyCode::TAB, KeyCode::TAB, KeyCode::TAB,
+                KeyCode::TAB,
+                KeyCode::SPACE, KeyCode::RETURN
               </autogen>
             </item>
             <item>
