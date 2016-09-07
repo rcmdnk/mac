@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+if [[ ! "$OSTYPE" =~ darwin ]];then
+  echo Can be used only in Mac.
+  exit 1
+fi
+
 files=("private.xml" "private.vim_emu.xml")
 karabiner="$HOME/Library/Application Support/Karabiner"
 instdirs=("$karabiner" "$karabiner")
