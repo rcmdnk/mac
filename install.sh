@@ -5,8 +5,8 @@ if [[ ! "$OSTYPE" =~ darwin ]];then
   exit
 fi
 
-files=("private.xml" "private.vim_emu.xml")
-karabiner="$HOME/Library/Application Support/Karabiner"
+files=(karabiner.json)
+karabiner="$HOME/.config/karabiner"
 instdirs=("$karabiner" "$karabiner")
 exclude=("." ".." "LICENSE" "README.md" "install.sh")
 
