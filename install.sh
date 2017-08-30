@@ -5,8 +5,8 @@ if [[ ! "$OSTYPE" =~ darwin ]];then
   exit
 fi
 
-files=(karabiner.json)
-karabiner="$HOME/.config/karabiner"
+#files=(karabiner.json)
+#karabiner="$HOME/.config/karabiner"
 instdirs=("$karabiner" "$karabiner")
 exclude=("." ".." "LICENSE" "README.md" "install.sh")
 
