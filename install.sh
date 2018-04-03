@@ -8,7 +8,7 @@ fi
 files=()
 #files=(karabiner.json)
 #karabiner="$HOME/.config/karabiner"
-instdirs=("$karabiner" "$karabiner")
+#instdirs=("$karabiner" "$karabiner")
 exclude=("." ".." "LICENSE" "README.md" "install.sh")
 
 backup=""
