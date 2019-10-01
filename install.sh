@@ -2,7 +2,7 @@
 
 if [[ ! "$OSTYPE" =~ darwin ]];then
   echo Can be used only in Mac.
-  exit
+  exit 1
 fi
 
 files=()
