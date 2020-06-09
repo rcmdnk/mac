@@ -172,7 +172,7 @@ defaults write com.apple.screencapture include-date -bool true;killall SystemUIS
 # }}}
 
 # Set screen shot store directory {{{
-defaults write com.apple.screencapture location "~/Dropbox/スクリーンショット/"
+defaults write com.apple.screencapture location "~/Downloads/"
 # set to default (Desktop)
 #defaults delete com.apple.screencapture location
 # }}}
