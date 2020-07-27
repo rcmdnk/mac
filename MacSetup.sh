@@ -305,6 +305,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 #[ ] Confirm Quit iTerm2
 defaults write com.googlecode.iterm2 OnlyWhenMoreTabs -bool false
 #Profiles->Terminal: Silence bellにチェック
+#Profiles->Keys: Left/Right Option KeyをNormalからEsc+に (Karabienr-Elementで必要なKeyをOpt->Cmdにしている)
 #
 #Appearance:
 #General: Theme: Compact (Minimalだとbarが黒くなるが、Compactの方がさらに小さくなる), Tab bar location: Top (CompactでBottomだとbarが消える...?消えると掴んで移動できなくなって困る) Status bar location: Bottom
