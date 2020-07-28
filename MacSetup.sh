@@ -274,10 +274,10 @@ defaults write com.clipy-app.Clipy kCPYPrefMaxMenuItemTitleLengthKey -int 100
 #HyperSwitch:
 #ログイン時に起動、メニューバーに表示させない設定など
 #SwitcherのmodifierをControl(0)に(defaultはこれら設定無しでOpt(1?), 2でCommand)
-com.bahoom.HyperSwitch run_in_background -bool true
-com.bahoom.HyperSwitch show_status_menu -bool false
-com.bahoom.HyperSwitch window_switcher_current_app_mod -int 0
-com.bahoom.HyperSwitch window_switcher_mod -int 0
+defaults write com.bahoom.HyperSwitch run_in_background -bool true
+defaults write com.bahoom.HyperSwitch show_status_menu -bool false
+defaults write com.bahoom.HyperSwitch window_switcher_current_app_mod -int 0
+defaults write com.bahoom.HyperSwitch window_switcher_mod -int 0
 # Dockから削除
 #
 #Caffeine
