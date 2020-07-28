@@ -51,7 +51,7 @@ defaults write -g AppleShowScrollBars -string "Always"
 #    * スクリーンセーバー: 開始までの時間: 開始しない
 #• Dock
 #    • サイズ: 全体の1/4くらいの位置の小さめ
-defaults write com.apple.dock tilesize -int 25
+defaults write com.apple.dock tilesize -int 50
 #    • 拡大: チェックを外す
 defaults write com.apple.dock magnification -bool false
 #    • Dockを自動的に表示/非表示: チェック
@@ -60,8 +60,6 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
 # DockのFinder/ゴミ箱以外全て消す
 defaults write com.apple.dock persistent-apps -array
-
-killall Dock
 
 #•Mission Control
 #最新の仕様状況に基づいて操作スペースを自動的に並べ替える: チェックを外す。
@@ -179,7 +177,7 @@ defaults write com.apple.dock showDesktopGestureEnabled -bool false
 #* 日付と時刻
 #時計
 #日付を表示
-defaults write com.apple.menuextra.clock DateFormat -string "M d E HH:mm" && killall SystemUIServer
+defaults write com.apple.menuextra.clock DateFormat -string "M d E HH:mm"
 #アクセシビリ
 #
 
@@ -211,7 +209,6 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 
-killall Finder
 
 
 
@@ -325,3 +322,11 @@ defaults write com.googlecode.iterm2 OnlyWhenMoreTabs -bool false
 #
 #GlobalProtect:
 #Microsoft Remote Desktopに
+
+
+## Restart to apply settings
+
+killall Dock
+killall Finder
+killall SystemUIServer
+
