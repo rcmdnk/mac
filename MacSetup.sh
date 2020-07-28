@@ -111,7 +111,7 @@ defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 # [macos - Is there a way to set an Application Shortcut in the Keyboard Preference Pane via Terminal? - Ask Different](https://apple.stackexchange.com/questions/91679/is-there-a-way-to-set-an-application-shortcut-in-the-keyboard-preference-pane-vi)
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>786432</integer></array><key>type</key><string>standard</string></dict></dict>"
 #        • 入力ソース: Google日本語入力の英数とひらがなを追加しデフォルトの日本語を削除。
-#* トラックパッド
+#* トラックパッド (not work?, need -currentHost and sudo pkill -1 'System Preferences' ?)
 #     * 調べる&データ検出: チェック外す
 defaults write -g com.apple.trackpad.forceClick -bool false
 #     * 副ボタンのクリック: 右下隅をクリック(二本指での副ボタンはBetterTouchToolで設定)
@@ -130,7 +130,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 
 defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
 #軌跡の速さ: 最速に (0-3, 少数も使える)
-defaults -currentHost write -g com.apple.trackpad.scaling 3
+defaults write -g com.apple.trackpad.scaling 3
 #     *  サイレントクリック: チェック
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -bool true
 #     *  強めのクリックと感触フィードバック; チェック
