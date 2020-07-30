@@ -279,6 +279,18 @@ defaults write com.bahoom.HyperSwitch window_switcher_mod -int 0
 #
 #Caffeine
 #ログイン時に起動、Dockやメニューバーに表示させない設定など
+# -> CaffeineはCatalinaでは機能しない?
+# -> より高度な事ができてCatalinaでも動作するAmphetamineを使う
+# Amphetamine
+defaults write com.if.Amphetamine  "Show Welcome Window" -int 0
+defaults write com.if.Amphetamine  "End Sessions On Forced Sleep" -int 1
+defaults write com.if.Amphetamine  "Hide Dock Icon" -int 1
+defaults write com.if.Amphetamine  "Icon Style" -int 5
+defaults write com.if.Amphetamine  "Manage Status Item Image Padding" -int 1
+defaults write com.if.Amphetamine  "Status Item Image Padding" -int 1
+defaults write com.if.Amphetamine  "Status Item Click" -int 2
+# Launch Amphetamine at loginはユーザーのスタートアップリストに直接登楼する形で、
+# 他とまとめて設定するのが結構めんどいので直接設定からいじる。
 #
 #
 #Slack:
