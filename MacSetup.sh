@@ -95,7 +95,7 @@ chsh -s /bin/bash
 #• キーのリピート: 最速 (小さい方が速い(msで間隔?)システム環境設定の最大速が2
 defaults write -g KeyRepeat -int 1
 #リピート入力認識までの時間: 最短 (小さい方が速い、システム環境設定の最大値だと15
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write -g InitialKeyRepeat -int 10
 #ユーザー辞書
 #英字入力中にスペルを自動変換: チェックを外す
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
@@ -179,6 +179,8 @@ defaults write com.apple.dock showDesktopGestureEnabled -bool false
 #日付を表示
 defaults write com.apple.menuextra.clock DateFormat -string "M d E HH:mm"
 #アクセシビリ
+# * ディスプレイ: 透明度を下げる (defaultsでは効かない?直接設定からいじる必要あり)
+#sudo defaults write com.apple.universalaccess "reduceTransparency" -bool true
 #
 
 
@@ -195,8 +197,6 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write -g AppleShowAllExtensions -bool true
 ## Show hidden files
 defaults write com.apple.finder AppleShowAllFiles true
-## show extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 ## Show full path in finder title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 ## Show library
@@ -207,7 +207,22 @@ defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 ## Disable confirmation of non-confirmed application
 defaults write com.apple.LaunchServices LSQuarantine -bool false
+## Enable copy in quick look (does not work?)
+defaults write com.apple.finder QLEnableTextSelection -bool true
+## Stop Quick Look when move to other application (does not work?)
+defaults write com.apple.finder QLHidePanelOnDeactivate -bool true
 
+# SystemUIServer
+## Remove shadow from screen shot
+defaults write com.apple.screencapture disable-shadow -bool true
+## Set type of screen capture (default: png)
+defaults write com.apple.screencapture type jpg
+## Set screen shot prefix (need at least 1 character (otherwise no SS is created!))
+defaults write com.apple.screencapture name "ss"
+## Set screen shot name with date
+defaults write com.apple.screencapture include-date -bool true
+## Set screen shot store directory
+defaults write com.apple.screencapture location "~/Downloads/"
 
 
 
